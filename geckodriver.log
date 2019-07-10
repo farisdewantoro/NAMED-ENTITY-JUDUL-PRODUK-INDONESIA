@@ -1,0 +1,1097 @@
+1562755797817	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.mGYcTDFOH3hM"
+1562755804632	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562755804634	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562755804634	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Parent 17956, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1562755831853	Marionette	INFO	Listening on port 60502
+1562755832270	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001D4B3FEB800)::ForceLoseContext
+WebGL(000001D4A7F72000)::ForceLoseContext
+[Parent 17956, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 17956, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13060, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13060, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_wi[Child 10124, Chrome_ChildThread] WARNING: pipe erro
+###!!! [Child][MessageChannel] Error: (msgtype=0x53000E,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+r: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10124, Chrome_ChildThread] WARNING: pipe 
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/rec1562755891101	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.3sdoa1aQ8HyM"
+1562755893695	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562755893696	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562755893696	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562755896992	Marionette	INFO	Listening on port 60853
+1562755897119	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207D7679000)::ForceLoseContext
+WebGL(00000207D768B800)::ForceLoseContext
+WebGL(00000207DF303800)::ForceLoseContext
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207D7538000)::ForceLoseContext
+WebGL(00000207DD20E800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207D8306800)::ForceLoseContext
+WebGL(00000207DF317000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207D830E000)::ForceLoseContext
+WebGL(00000207D8237000)::ForceLoseContext
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207E5286800)::ForceLoseContext
+WebGL(00000207DD220000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207E90B6800)::ForceLoseContext
+WebGL(00000207E90AB800)::ForceLoseContext
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207E9FD5800)::ForceLoseContext
+WebGL(00000207E90B4800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000207EA0D9800)::ForceLoseContext
+WebGL(00000207EA0E1000)::ForceLoseContext
+WebGL(00000207EF7B1000)::ForceLoseContext
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+[[Child 4676, Chrome_ChildThreadC] WARNING: pipe herror: 1i09: fille z:/task_15d609886 313528, Chrome6/bui_lChildThread] WARNINdG: pipe erro/rs:rc/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341 
+109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+[Parent 1540, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15384, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15384, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562756024605	Marionette	INFO	Stopped listening on port 60853
+[GPU 46
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+56, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/ch
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+in.cc, line 341
+[Parent 13464, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9064, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562756024608	Marionette	INFO	Stopped listening on port 60998
+[GPU 32
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562756103196	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.8qVKcVPgcf6X"
+1562756104522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562756104522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562756104522	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562756107737	Marionette	INFO	Listening on port 61396
+1562756108115	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000013AF5EDA000)::ForceLoseContext
+WebGL(0000013AF6A72000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000013AF6A4C000)::ForceLoseContext
+WebGL(0000013AFCCFB800)::ForceLoseContext
+[Parent 17492, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 17492, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 17492, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 17492, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18556, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18556, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562756147420	Marionette	INFO	Stopped listening on port 61396
+[GPU 4908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/tas
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001D4C0AEE000)::ForceLoseContext
+WebGL(000001D4C0AEA800)::ForceLoseContext
+WebGL(000001D4CE01E000)::ForceLoseContext
+[Parent 20284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001D4C0F0D000)::ForceLoseContext
+WebGL(000001D4C0F16000)::ForceLoseContext
+WebGL(000001D4C527A800)::ForceLoseContext
+[Parent 20284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 20284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19008, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19008, Chrome_ChildThread] WA[Parent 20284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21312, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21312, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988[Parent 20284, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15800, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15800, Chrome_ChildThread] WARNING: p1562756426398	Marionette	INFO	Stopped listening on port 61578
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 13104, Chrome_ChildThread] WARNING: pipe error: 109: file z:/tas
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C399F15800)::ForceLoseContext
+WebGL(000001C3A15C3800)::ForceLoseContext
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C3A15A8800)::ForceLoseContext
+WebGL(000001C3A1DA4000)::ForceLoseContext
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C3A32C4800)::ForceLoseContext
+WebGL(000001C3A32CF800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C3AA487800)::ForceLoseContext
+WebGL(000001C3935CF000)::ForceLoseContext
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C3AAF68800)::ForceLoseContext
+WebGL(000001C3AAF6F800)::ForceLoseContext
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C3AC6A9800)::ForceLoseContext
+WebGL(000001C3AC6A6000)::ForceLoseContext
+WebGL(000001C3AC6ED800)::ForceLoseContext
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001C3AEBBD000)::ForceLoseContext
+WebGL(000001C3AEBA1000)::ForceLoseContext
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9976, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9976, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/co[Child 6844, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6844, Chrome_ChildThread] WARNING: pipe error:[Parent 18564, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8408, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8408, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562756474295	Marionette	INFO	Stopped listening on port 61928
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 14732, Chrome_ChildThread
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B45850E000)::ForceLoseContext
+WebGL(000001B458523800)::ForceLoseContext
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 13752, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1432, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1432, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 13752, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18872, Chrome_ChildThread] WARNING: pipe error: 109: file[Parent 13752, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20776, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20776, Chrome_ChildThread] WARNING: pipe error: 109: file1562756585640	Marionette	INFO	Stopped listening on port 62512
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 10612, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome
+WebGL(000002D5F0E83800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002D5F21AE800)::ForceLoseContext
+WebGL(000002D5F217B000)::ForceLoseContext
+WebGL(000002D5F6757000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002D5EFFDD800)::ForceLoseContext
+WebGL(000002D5EE006000)::ForceLoseContext
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 10632, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002D5F0DC5800)::ForceLoseContext
+WebGL(000002D5F160C000)::ForceLoseContext
+WebGL(000002D5F21B2800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002D5854BB800)::ForceLoseContext
+WebGL(000002D5854B5000)::ForceLoseContext
+WebGL(000002D5F0DC3800)::ForceLoseContext
+[Parent 10632, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8384, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8384, Chrome_ChildThread] WARNING: pip[Parent 10632, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10248, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/commo[Child 3444, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 3444, Chrome_ChildThread] WARNING: pipe error: 109: f1562756612972	Marionette	INFO	Stopped listening on port 62765
+[GPU 15692, Ch
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ly one instance of babel-polyfill is allowed
+WebGL(000002B6859EA000)::ForceLoseContext
+WebGL(000002B68A1B2000)::ForceLoseContext
+WebGL(000002B68B137800)::ForceLoseContext
+[Parent 6556, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13452, Chrome_ChildThread] WARNINJavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+[Parent 6556, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6556, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4592, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4592, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6556, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14636, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14636, Chrome_ChildThread]
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+1562756612748	Marionette	INFO	Stopped listening on port 63257
+[GP
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562756635755	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.6olS0rpG1ZhP"
+1562756636255	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562756636256	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562756636256	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562756639129	Marionette	INFO	Listening on port 63459
+1562756642295	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.Omc7xa4UZYUv"
+1562756642804	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562756642804	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562756642804	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562756646458	Marionette	INFO	Listening on port 63500
+1562756646616	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002584561B000)::ForceLoseContext
+WebGL(000002584562C000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000025844FDE800)::ForceLoseContext
+WebGL(00000258524B6800)::ForceLoseContext
+[Parent 17900, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000258448E2000)::ForceLoseContext
+WebGL(00000258558BA800)::ForceLoseContext
+[Parent 17900, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000258558DC800)::ForceLoseContext
+WebGL(00000258558C4000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000025844FA7000)::ForceLoseContext
+WebGL(0000025857EA5800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000025857251800)::ForceLoseContext
+WebGL(0000025856E25000)::ForceLoseContext
+WebGL(0000025857EAE800)::ForceLoseContext
+[Parent 17900, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5668, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+[Parent 17900, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 17900, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20988, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20988, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium[Parent 17900, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/ch1562756727514	Marionette	INFO	Stopped listening on port 63500
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562772153220	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.IGZ51RPADDxE"
+1562772155584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562772155584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562772155584	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17180, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17180, Chrome_ChildThread] WARNING: pipe err[Parent 8844, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+1562772182075	Marionette	INFO	Listening on port 50400
+1562772182575	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024061E40800)::ForceLoseContext
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024061E3B000)::ForceLoseContext
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002406877E000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000240625BF000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024075248000)::ForceLoseContext
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024076AB2000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002407777D800)::ForceLoseContext
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17224, Chrome_ChildThread] WARNING: pipe error: 109: 
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17224, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+chrome/common/ipc_channel_win.cc, line 341
+[Parent 8844, Gecko_IOThread] WARNING: file z:/task_1560988636/build/src/ipc/chromium/src/base/process_util_win.cc, line 160
+[Parent 8844, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21020, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21020, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/com1562772285880	Marionette	INFO	Stopped listening on port 50400
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562772299876	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.m3rc2gzmI38f"
+1562772301350	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562772301351	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562772301351	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562772304950	Marionette	INFO	Listening on port 50732
+1562772305294	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022179711000)::ForceLoseContext
+[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022102634800)::ForceLoseContext
+[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002210A0B8000)::ForceLoseContext
+[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022178BE2000)::ForceLoseContext
+[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002210CFA6800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000221792ED000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002217970B800)::ForceLoseContext
+[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002210DFDA800)::ForceLoseContext
+[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562772421354	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.cXI[Parent 19764, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11672, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 5328, Chrome_ChildThread] WARNING: pipe error: 109: file z:/[Parent 16092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562772434611	Marionette	INFO	Listening on port 50989
+[Child 2932, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2932, Chrome_ChildThread] WARNING1562772435092	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017FE48B0000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017FE36E6000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017FD7964800)::ForceLoseContext
+[Parent 16092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 16092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017FE2F4E800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017FE36F3000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017FE7CAE800)::ForceLoseContext
+[Parent 16092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+[Child 13768, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 16092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 16092, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11228, Chrome_ChildThread] WARNING: pi[Child 19872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x53000E,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+1562772503735	Marionette	INFO	Stopped listening on port 50989
+[GPU 10876, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562772577607	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.1qak4pCO98xp"
+1562772578063	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562772578064	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562772578064	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562772581016	Marionette	INFO	Listening on port 51317
+1562772581426	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001E6B0E5E800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001E6B7B6B000)::ForceLoseContext
+[Parent 18044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001E6A9A09000)::ForceLoseContext
+[Parent 18044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001E6B9459000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001E6B5DE7800)::ForceLoseContext
+[Parent 18044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001E6B97FC000)::ForceLoseContext
+[Parent 18044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21084, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 18044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8760, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[Parent 18044, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6228, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562772683908	Marionette	INFO	Stopped listening on port 51317
+[GPU 1176, Chrome_ChildThre
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ad] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562773045857	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.8hGWh2TzMco2"
+1562773046924	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562773046925	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562773046925	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562773050133	Marionette	INFO	Listening on port 51847
+1562773050181	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001D7DC16C000)::ForceLoseContext
+[Child 8836, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8836, Chrome_ChildThread] WARNING[Parent 6024, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9816, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9816, Chrome_ChildThread] WARNING: pipe error: 109: file z[Parent 6024, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4004, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562773213535	Marionette	INFO	Stopped listening on port 51847
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+ead] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002993DEC8800)::ForceLoseContext
+[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002993771F800)::ForceLoseContext
+[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002993C9AE000)::ForceLoseContext
+[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002993FB07800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000299406F7800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002993799B800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002994D48A000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000299377E1800)::ForceLoseContext
+[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18920, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18920, Chrome_ChildThrea[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10840, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10840, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 12484, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13952, Chrome_ChildThread] WARNING1562773329830	Marionette	INFO	Stopped listening on port 52091
+[GPU
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ 17908, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562773575970	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.w3WMQjjZZVv8"
+1562773576496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562773576496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562773576496	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562773579667	Marionette	INFO	Listening on port 52664
+1562773579845	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002CC00D57000)::ForceLoseContext
+[Parent 16732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 16732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 16732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17632, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17632, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_156[Parent 16732, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2868, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2868, Chrome_ChildThread] WARNING: 1562773615720	Marionette	INFO	Stopped listening on port 52664
+[GPU 11044, Chrome_ChildT
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562773648117	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.hUfZXJ88wjFo"
+1562773649001	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562773649002	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562773649002	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562773652308	Marionette	INFO	Listening on port 52840
+1562773652435	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000029070ED9000)::ForceLoseContext
+[Parent 6704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6780, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6780, Chrome_ChildThread] W[Parent 6704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x610027,name=PNecko::Msg_RemoveRequestContext) Channel closing: too late to send/recv, messages will be lost
+
+[Child 4272, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4272, Chrome_ChildThread] WARNING: pipe error: 109: f[Parent 6704, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7344, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome1562773735244	Marionette	INFO	Stopped listening on port 52840
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 18280, Chrome_ChildThread] WARNING: pipe error: 109: f
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562773747703	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.2qgVI5EaI4N6"
+1562773748150	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562773748150	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562773748150	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562773751450	Marionette	INFO	Listening on port 53070
+1562773751527	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022AB9672000)::ForceLoseContext
+[Parent 10624, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 10624, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9020, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9020, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 10624, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562773832329	Marionette	INFO	Stopped listening on port 53070
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 3180, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988631562773848552	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.Ul8bnfuywAAV"
+1562773849045	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562773849045	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562773849045	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562773852854	Marionette	INFO	Listening on port 53291
+1562773852900	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000260805C9800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026080607800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002608931D000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002608D8C2000)::ForceLoseContext
+[Parent 11808, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11808, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19008, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11808, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11808, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8456, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8456, Chrome_ChildThread] WARNING: pipe1562773930575	Marionette	INFO	Stopped listening on port 53291
+[GPU 7000, Chro
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562773994568	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.NLCWSc2otZc0"
+1562773995039	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562773995039	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562773995040	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562773997755	Marionette	INFO	Listening on port 53589
+1562773997820	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000023EEB1D9000)::ForceLoseContext
+WebGL(0000023EEBEE8800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000023EEBE9E000)::ForceLoseContext
+WebGL(0000023EEC50A000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000023EEBEB8000)::ForceLoseContext
+WebGL(0000023EF8563000)::ForceLoseContext
+[Parent 11836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000023E8246A000)::ForceLoseContext
+WebGL(0000023EF3AF1800)::ForceLoseContext
+[Parent 11836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000023E845DE800)::ForceLoseContext
+WebGL(0000023EEBEF6000)::ForceLoseContext
+[Parent 11836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7072, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7072, Chrome_ChildThrea[Parent 11836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 6052, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 11836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562774124807	Marionette	INFO	Stopped listening on port 53589
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562774129174	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.2IPOlohbppPy"
+1562774130216	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562774130216	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562774130216	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562774133611	Marionette	INFO	Listening on port 53847
+1562774134104	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001BE437DA000)::ForceLoseContext
+[Parent 10760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001BE442D3800)::ForceLoseContext
+[Parent 10760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001BE51894000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001BE55BDA800)::ForceLoseContext
+[Parent 10760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 10760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 8176, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 10760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12476, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 10760, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18952, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562774597335	Marionette	INFO	Stopped listening on port 53847
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+OThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001DB04288800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001DB0428A000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001DB703AD000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001DB76A0F000)::ForceLoseContext
+[Parent 15124, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001DB7A5AC000)::ForceLoseContext
+WebGL(000001DB7B081800)::ForceLoseContext
+[Parent 15124, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 15124, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21032, Chrome_ChildThread] WARNING: pipe error: 232: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 502
+[Child 21032, Chrome_ChildThread] WARNING: pipe error: 232: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 502
+[Child 21032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 21032, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/sr[Parent 15124, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12620, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12620, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build1562774597337	Marionette	INFO	Stopped listening on port 54126
+[GPU
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ 13184, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_156098
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562775224927	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.7ubHiaJkqvyv"
+1562775225919	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562775225920	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562775225920	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562775229630	Marionette	INFO	Listening on port 55157
+1562775229850	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024CF563F800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024CFB9D9800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024C86672000)::ForceLoseContext
+[Parent 7856, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024C8349B800)::ForceLoseContext
+[Parent 7856, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000024C8348A800)::ForceLoseContext
+[Parent 7856, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16452, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+[Parent 7856, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 7856, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[[Parent 7856, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9936, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 9936, Chrome_ChildThread] 1562775290438	Marionette	INFO	Stopped listening on port 55157
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 17
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562775444304	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.NBMkP0LYwBUT"
+1562775445504	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562775445506	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562775445506	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562775448396	Marionette	INFO	Listening on port 55551
+1562775448631	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026E9B0D8800)::ForceLoseContext
+WebGL(0000026EA1844800)::ForceLoseContext
+[Parent 13104, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026E9BC49000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026EA29E3800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026EA36F5800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026EA8997000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026E9C3D9800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000026E9BC43000)::ForceLoseContext
+[Parent 13104, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 13104, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7024, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7024, Chrome_C[Parent 13104, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11732, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 11732, Chrome_ChildThread] WARNING: pipe error: 109[Parent 13104, Gecko_IOThread] WARNING: pipe erro1562777442715	Marionette	INFO	Listening on port 57224
+1562777442835	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B9505E1800)::ForceLoseContext
+[Parent 6448, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B951148800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B9563E8000)::ForceLoseContext
+[Parent 6448, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B9512B8800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+WebGL(000001B950C98800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B9513A0800)::ForceLoseContext
+[Parent 6448, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000001B950543000)::ForceLoseContext
+[Parent 6448, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6448, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16580, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16580, Chrome_ChildThread] WARNING: pipe error: 109: fi[Child 18752, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18752, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 6448, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18524, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 18524, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562778557623	Marionette	INFO	Stopped listening on port 57224
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 10384, Chrome_ChildThrea
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+L(0000022DA1BAE800)::ForceLoseContext
+[Parent 19136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022DAA057800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022DAEFD5800)::ForceLoseContext
+[Parent 19136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000022DA141C000)::ForceLoseContext
+WebGL(0000022DB4245800)::ForceLoseContext
+[Parent 19136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 19136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14340, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 19136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2304, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome[Parent 19136, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1152, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1152, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562778665945	Marionette	INFO	Stopped listening on port 58299
+ium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000028AF4FB6800)::ForceLoseContext
+[Parent 20836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562719311956%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562710991421%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+console.warn: "Error while detaching the thread front: 'detach' request packet to 'server1.conn0.child1/context19' can't be sent as the connection is closed."
+[Parent 20836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16036, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/s[Parent 20836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12232, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 12232, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 20836, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 788, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562781444205	Marionette	INFO	Stopped listening on port 58779
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU ://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562710991421%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 21192, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 16744, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: resource://gre/modules/WebProgressChild.jsm, line 61: TypeError: this.mm.content is null
+[Parent 21192, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 21192, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20460, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20460, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562781460706	Marionette	INFO	Stopped listening on port 59062
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 7012, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562781958257	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.M6DZ9Myx74FG"
+1562781958671	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562781958671	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562781958671	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562781962194	Marionette	INFO	Listening on port 63636
+1562781962580	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211A349B000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211A3298800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211A82B4800)::ForceLoseContext
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562710991421%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211B00B9800)::ForceLoseContext
+[Parent 7976, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211B054E000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211B47E3000)::ForceLoseContext
+[Parent 7976, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002119CAE2800)::ForceLoseContext
+[Parent 7976, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000211B6D10000)::ForceLoseContext
+[Parent 7976, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 7976, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 17444, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task1562782102206	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562782102207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562782102207	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562782105989	Marionette	INFO	Listening on port 64353
+1562782106163	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000203CCEDA000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000203CD91A800)::ForceLoseContext
+[Parent 20972, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000203C7377000)::ForceLoseContext
+[Parent 20972, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7124, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+[Parent 20972, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10764, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 10764, Chrome_ChildThread] WARNING: p[Parent 20972, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562782178779	Marionette	INFO	Stopped listening on port 64353
+[GPU 19164, Chrome_Ch
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+ildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_w
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562782191640	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.7braTUHU9Lrz"
+1562782192253	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562782192254	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562782192254	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1562782196229	Marionette	INFO	Listening on port 64613
+1562782196615	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017F47A29800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017F3C374000)::ForceLoseContext
+[Parent 9648, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000017F4EA19000)::ForceLoseContext
+[Parent 9648, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9648, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 960, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 9648, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x530005,name=PHttpChannel::Msg_Cancel) Closed channel: cannot send/recv
+
+[Parent 9648, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15416, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15416, Chrome_ChildThread] WARNING1562782239359	Marionette	INFO	Stopped listening on port 64613
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 2348, Chrome_ChildThread] WARNING: pipe err
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1562782252588	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.JANmF2DDY4bN"
+1562782253054	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1562782253055	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1562782253055	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+[Parent 11944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19872, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 19872, Chrome_ChildThread] WARNI1562782257671	Marionette	INFO	Listening on port 64912
+1562782258011	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002014CC61000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002014CC73800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(0000020152658800)::ForceLoseContext
+[Parent 11944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002015820D800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(00000201582A9800)::ForceLoseContext
+[Parent 11944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002015B5A4800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562710991421%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 11944, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20596, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 20596, Chrome_ChildThread] WARNING: pipe error: 109: file [Child 7828, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7828, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 2424, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1562782482972	Marionette	INFO	Stopped listening on port 64912
+[GP
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+U 13288, 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+le.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221562710991421%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:203:13
+
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A23A348800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A23A352800)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A23A759800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A23A328000)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A233D3E000)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A23F622800)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A241ED7800)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A241EE0800)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A23F889000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A245166800)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A2464CC000)::ForceLoseContext
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A249193000)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+JavaScript error: https://laz-g-cdn.alicdn.com/lazada-decorate/decorate-portal/0.4.0/lib/polyfill.min.js, line 1: Error: only one instance of babel-polyfill is allowed
+WebGL(000002A24D320000)::ForceLoseContext
+[Parent 9520, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1560988636/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
