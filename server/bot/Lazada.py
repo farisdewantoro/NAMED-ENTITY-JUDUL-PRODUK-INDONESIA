@@ -97,9 +97,18 @@ def stop_find(bot):
 
 
 class LazadaBot:
-    def __init__(self, keyword):
-        self.keyword = keyword
+    def __init__(self):
+        self.keyword = ''
         self.bot = webdriver.Firefox()
+        self.isRunning = False
+
+    def start_bot(self,keyword):
+        self.isRunning = True
+        self.keyword = keyword
+    def stop_bot(self):
+        self.isRunning = False
+        self.keyword = ''
+        print(self.isRunning)
 
     def run_finding(self):
         bot = self.bot
@@ -130,21 +139,13 @@ class LazadaBot:
         for list_p in first_product:
               emit('response_search_lazada', json.dumps(list_p))
             # writer.writerow(list_p)
-               
-
         # product_list.append(list(first_product))
 
         pagination = check_next(bot)
-
-        next_page = False
         i = 1
-        
-
-        if pagination:
-            next_page = True
-        while next_page:
-          
-            
+        if not pagination:
+            self.isRunning = False
+        while self.isRunning:
             i += 1
             link = re.sub(r"page=(\d)$", f"page={i}", pagination)
             print(link)
@@ -156,7 +157,7 @@ class LazadaBot:
             time.sleep(2.5)
             keep_run = stop_find(bot)
             if not keep_run:
-                next_page = False
+                self.isRunning = False
             list_p = bot.find_elements_by_class_name("c5TXIP")
             product = map(get_list, list_p)
             # emit('response_search_lazada', json.dumps(list(product)))

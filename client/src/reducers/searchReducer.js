@@ -17,7 +17,6 @@ export default function (state = initialState, action) {
         case SEARCH.APPEND_LAZADA_PRODUCT:
             let slice = state.product_lazada.slice(0,10);
             let new_p= [action.payload, ...slice];
-            console.log(new_p)
             return{
                 ...state,
                 product_lazada: new_p

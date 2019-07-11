@@ -138,7 +138,7 @@ class App extends Component {
                     </Grid>
                 </Grid>
                 <div style={{ marginTop: "50px" }}>
-                    <Lazada data={searchs.product_lazada} classes={classes} handlerStopCrawling={handlerStopCrawling}/>
+                    <Lazada data={searchs.product_lazada} classes={classes} handlerStopCrawling={this.handlerStopCrawling}/>
                 </div>
              
               

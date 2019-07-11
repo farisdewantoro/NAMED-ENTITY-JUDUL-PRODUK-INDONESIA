@@ -5,6 +5,10 @@ import time
 from ..bot import LazadaBot
 import json
 import random
+
+global bot
+bot = LazadaBot()
+
 @socketio.on('joined')
 def joined(message):
     print(message)
@@ -29,5 +33,12 @@ def search_lazada(message):
     #     "link": "https://www.lazada.co.id/products/denim-original-hitam-i143570579-s157343054.html?search=1"
     # }
     # emit('response_search_lazada', json.dumps(data))
-    bot = LazadaBot(message['keyword'])
+
+    bot.start_bot(message['keyword'])
     bot.run_finding()
+
+
+@socketio.on('stop_searching')
+def stop_search(message):
+    print(message)
+    bot.stop_bot()
