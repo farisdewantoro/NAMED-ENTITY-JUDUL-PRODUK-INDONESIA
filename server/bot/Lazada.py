@@ -112,6 +112,8 @@ class LazadaBot:
 
     def run_finding(self):
         bot = self.bot
+        bot.set_window_position(0, 0)
+        bot.set_window_size(320, 480)
         bot.get(
             f"https://www.lazada.co.id/catalog/?q={self.keyword}&_keyori=ss&from=input&spm=a2o4j.searchlistcategory.search.go.45326184F3RgQ9"
         )

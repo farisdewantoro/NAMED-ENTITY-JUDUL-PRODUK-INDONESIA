@@ -22,6 +22,8 @@ export const responseFromServer = ()=>disbatch=>{
 }
 
 export const stopSearch = ()=>disbatch=>{
-    console.log('trigger ini')
     io.emit('stop_searching',{search:false})
+    disbatch({
+        type:SEARCH.remove_loading
+    })
 }

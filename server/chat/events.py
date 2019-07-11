@@ -39,6 +39,7 @@ def search_lazada(message):
 
 
 @socketio.on('stop_searching')
-def stop_search(message):
+def stop_searching(message):
     print(message)
+    print(50*'=')
     bot.stop_bot()

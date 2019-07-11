@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import styles from './components/styles';
 import Lazada from './components/Lazada';
+import List_Lazada from './components/List_Lazada'
 import moment from 'moment';
 import { searchProduct, responseFromServer, stopSearch } from './actions/searchActions';
 import classNames from 'classnames';
@@ -138,7 +139,7 @@ class App extends Component {
                     </Grid>
                 </Grid>
                 <div style={{ marginTop: "50px" }}>
-                    <Lazada data={searchs.product_lazada} classes={classes} handlerStopCrawling={this.handlerStopCrawling}/>
+                    <List_Lazada data={searchs} classes={classes} handlerStopCrawling={this.handlerStopCrawling}/>
                 </div>
              
               
