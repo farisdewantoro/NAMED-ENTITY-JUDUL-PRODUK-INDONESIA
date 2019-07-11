@@ -1,0 +1,173 @@
+HSV
+Abu-abu
+Biru
+Biru dongker
+Biru laut (Sian)
+Coklat
+Emas
+Hijau
+Hitam
+Kuning
+Magenta
+Mawar
+Merah
+Merah marun
+Merah jambu
+Nila
+Jingga
+Perak
+Putih
+Ungu
+Violet
+Zaitun
+Warna dasar Merah
+Merah Indian
+Koral terang
+Salmon
+Salmon gelap
+Salmon terang
+Krimson
+Merah
+Merah Bata
+Merah tua
+Warna dasar Merah Jambu
+Merah muda
+Merah muda terang
+Merah muda panas
+Merah muda dalam
+MediumVioletRed
+PaleVioletRed
+Warna dasar Oranye
+Salmon terang
+Koral
+Tomat
+Merah oranye
+Jingga tua
+Jingga
+Warna dasar Kuning
+Emas
+Kuning
+Kuning terang
+LemonChiffon
+LightGoldenrodYellow
+PapayaWhip
+Moccasin
+PeachPuff
+PaleGoldenrod
+Khaki
+DarkKhaki
+Warna dasar Ungu
+Lavender
+Thistle
+Plum
+Violet
+Orchid
+Fuchsia
+Magenta
+MediumOrchid
+MediumPurple
+BlueViolet
+DarkViolet
+DarkOrchid
+DarkMagenta
+Ungu
+Indigo
+SlateBlue
+DarkSlateBlue
+Warna dasar Hijau
+GreenYellow
+Chartreuse
+LawnGreen
+Lime
+LimeGreen
+PaleGreen
+LightGreen
+MediumSpringGreen
+SpringGreen
+MediumSeaGreen
+SeaGreen
+ForestGreen
+Hijau
+DarkGreen
+YellowGreen
+OliveDrab
+Olive
+DarkOliveGreen
+MediumAquamarine
+DarkSeaGreen
+LightSeaGreen
+DarkCyan
+Teal
+Warna dasar Biru
+Aqua
+Cyan
+LightCyan
+PaleTurquoise
+Aquamarine
+Turquoise
+MediumTurquoise
+DarkTurquoise
+CadetBlue
+SteelBlue
+LightSteelBlue
+PowderBlue
+LightBlue
+SkyBlue
+LightSkyBlue
+DeepSkyBlue
+DodgerBlue
+CornflowerBlue
+MediumSlateBlue
+RoyalBlue
+Biru
+MediumBlue
+DarkBlue
+Navy
+MidnightBlue
+Warna dasar Coklat
+Cornsilk
+BlanchedAlmond
+Bisque
+NavajoWhite
+Wheat
+BurlyWood
+Tan
+RosyBrown
+SandyBrown
+Goldenrod
+DarkGoldenrod
+Peru
+Chocolate
+SaddleBrown
+Sienna
+Brown
+Maroon
+Warna dasar Putih
+Putih
+Snow
+Honeydew
+MintCream
+Azure
+AliceBlue
+GhostWhite
+WhiteSmoke
+Seashell
+Beige
+OldLace
+FloralWhite
+Ivory
+AntiqueWhite
+Linen
+LavenderBlush
+MistyRose
+Warna dasar Abu-abu
+Gainsboro
+Abu-abu Muda
+Silver
+Abu-abu Tua
+Abu-abu
+DimGray
+LightSlateGray
+SlateGray
+DarkSlateGray
+Hitam
