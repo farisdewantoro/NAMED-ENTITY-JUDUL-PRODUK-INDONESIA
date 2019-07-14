@@ -1,35 +1,94 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-    Card,
-    CardContent,
-    Button
-} from '@material-ui/core'
+import {Card, CardContent, Button} from '@material-ui/core'
+// "TYPE": "TYPE", # 2119 "BRAND": "BRAND", # 1099 "NAME": "NAME", # 733
+// "COLOR": "COLOR", # 414 "MATERIAL": "MATERIAL", # 202 "THEME": "THEME", # 161
+// "DIMENSION": "DIMENSION", # 148 "GENDER": "GENDER", # 140 "SIZE": "SIZE", #
+// 122 "MASS": "MASS", # 95 "AGE": "AGE", # 74 "SHAPE": "SHAPE", # 30
+// "CAPACITY": "CAPACITY", # 52 "RAM": "RAM", # 24 "OS": "OS", # 15 "PROCESSOR":
+// "PROCESSOR", # 14 "GRAPHIC": "GRAPHIC", # 7 "STORAGE": "STORAGE", # 7
+// "DISPLAY": "DISPLAY", # 5 "MEMORY": "MEMORY", # 5 "CPU": "CPU", # 4 "CAMERA":
+// "CAMERA", # 4
+function renderTitle(data, classes) {
+   
+    let element =  keys.map(key=>{
+        return (
+            <li>
+                <span className={key}>
+                    {data[key]}
+                </span>
+            </li>
+        )
+    })
+   return element
+}
+
 const List_Lazada = props => {
-    const { classes, data, handlerStopCrawling } = props;
-    const NoImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png'
+
+    const {classes, data, handlerStopCrawling} = props;
+    const NoImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg' +
+            '/480px-No_image_available.svg.png'
 
     return (
 
-          <Card>
-              <CardContent>
+        <Card>
+            <CardContent>
                 <div>
                     {data.loading && (
-                        <Button onClick={handlerStopCrawling} variant="contained" color="primary" style={{ position: "absolute" }}>
+                        <Button
+                            onClick={handlerStopCrawling}
+                            variant="contained"
+                            color="primary"
+                            style={{
+                            position: "absolute"
+                        }}>
                             STOP CRAWLING
-                    </Button>
+                        </Button>
                     )}
-    
-                    <h1 className={classes.titleProductRoot} style={{ textAlign: 'center' }}>
+
+                    <h1
+                        className={classes.titleProductRoot}
+                        style={{
+                        textAlign: 'center'
+                    }}>
                         HASIL PENCARIAN DARI LAZADA
-                        </h1>
-                    <h1 className={classes.titleProductRoot} style={{ textAlign: 'center',padding:'15px 0' }}>
+                    </h1>
+                    <h1
+                        className={classes.titleProductRoot}
+                        style={{
+                        textAlign: 'center',
+                        padding: '15px 0'
+                    }}>
                         Total produk : {data.product_lazada_length}
-                        </h1>
+                    </h1>
                 </div>
-                <div className='table-responsive' style={{maxHeight:400}}>
+                <div
+                    className='table-responsive'
+                    style={{
+                    maxHeight: 400
+                }}>
                     <table className="table">
-                        <thead>
+                        <tbody>
+                            {data
+                                .product_lazada
+                                .map((d1, i) => {
+                                    return (
+                                        <tr >
+
+                                            <td className={classes.rootTitleText}>
+                                                {d1 && d1.named_tag.map(d2=>{
+                                                    return  renderTitle(d2, classes)
+                                                })}
+                                             
+
+                                            </td>
+
+                                        </tr>
+                                    )
+
+                                })}
+                        </tbody>
+                        {/* <thead>
                             <tr>
                                 <th>
                                     NO
@@ -44,8 +103,8 @@ const List_Lazada = props => {
                                     LOCATION
                       </th>
                             </tr>
-                        </thead>
-                        <tbody>
+                        </thead> */}
+                        {/* <tbody>
                             {data.product_lazada.map((d, i) => {
                                 return (
                                     <tr onClick={()=>window.open(d.link,'_blank')}>
@@ -69,19 +128,17 @@ const List_Lazada = props => {
                                     </tr>
                                 )
                             })}
-                        </tbody>
+                        </tbody> */}
 
                     </table>
 
                 </div>
-              </CardContent>
-          </Card>
-       
+            </CardContent>
+        </Card>
+
     )
 }
 
-List_Lazada.propTypes = {
-
-}
+List_Lazada.propTypes = {}
 
 export default List_Lazada

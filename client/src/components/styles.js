@@ -19,6 +19,13 @@ export default theme => ({
         padding: "0px 15px",
         
     },
+    rootTitleText:{
+        display:"flex",
+        listStyle:"none",
+        "& li":{
+            padding:4
+        }
+    },
     textProductTitle:{
         overflow:"hidden",
         height:41.5,

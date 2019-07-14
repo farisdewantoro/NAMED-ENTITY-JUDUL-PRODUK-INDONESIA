@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint, jsonify
 from pprint import pprint
-from server import db
+# from server import db
 from . import chat
 import json
 
@@ -11,3 +11,7 @@ import json
 def send_chat():
     pprint(request.__dict__)
     return request.json
+
+@chat.route('/tes')
+def testing():
+    return 'ada'

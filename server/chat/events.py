@@ -33,9 +33,9 @@ def search_lazada(message):
     #     "link": "https://www.lazada.co.id/products/denim-original-hitam-i143570579-s157343054.html?search=1"
     # }
     # emit('response_search_lazada', json.dumps(data))
-
-    bot.start_bot(message['keyword'])
-    bot.run_finding()
+    if message['keyword']:
+        bot.start_bot(message['keyword'])
+        bot.run_finding()
 
 
 @socketio.on('stop_searching')

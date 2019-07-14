@@ -17,6 +17,65 @@ li {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
+
+.I-COLOR,
+.I-BRAND,
+.I-NAME,
+.B-COLOR,
+.B-BRAND,
+.B-NAME,
+.B-PROCESSOR {
+    padding: 5px;
+    color: white;
+}
+
+.B-TYPE,
+.I-TYPE,
+.O {
+    padding: 5px;
+    color: black;
+}
+
+.B-TYPE {
+    background: #fdfd33;
+}
+
+.B-NAME {
+    background: #8ef5d2;
+}
+
+.B-COLOR {
+    background: #5ae052;
+}
+
+.B-BRAND {
+    background: #ec2c2c;
+}
+
+.B-PROCESSOR {
+    background: #ff3eef;
+}
+
+.I-TYPE {
+    background: #fdfd33;
+}
+
+.I-NAME {
+    background: #8ef5d2;
+}
+
+.I-COLOR {
+    background: #5ae052;
+}
+
+.I-BRAND {
+    background: #ec2c2c;
+}
+
+.I-PROCESSOR {
+    background: #ff3eef;
+}
+
 body {
     margin: 0;
     padding: 0;
