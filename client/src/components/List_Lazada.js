@@ -14,9 +14,12 @@ function renderTitle(data, classes) {
     let element =  keys.map(key=>{
 
         return (
-            <li>
+            <li style={{display:'grid'}}>
                 <span className={key}>
                     {data[key]}
+                </span>
+                <span className={classes.object_class}>
+                    {key}
                 </span>
             </li>
         )
@@ -35,29 +38,13 @@ const List_Lazada = props => {
         <Card>
             <CardContent>
                 <div>
-                    {data.loading && (
-                        <Button
-                            onClick={handlerStopCrawling}
-                            variant="contained"
-                            color="primary"
-                            style={{
-                            position: "absolute"
-                        }}>
-                            STOP CRAWLING
-                        </Button>
-                    )}
+              
 
+               
                     <h1
                         className={classes.titleProductRoot}
                         style={{
-                        textAlign: 'center'
-                    }}>
-                        HASIL PENCARIAN DARI LAZADA
-                    </h1>
-                    <h1
-                        className={classes.titleProductRoot}
-                        style={{
-                        textAlign: 'center',
+                        textAlign: 'left',
                         padding: '15px 0'
                     }}>
                         Total produk : {data.product_lazada_length}

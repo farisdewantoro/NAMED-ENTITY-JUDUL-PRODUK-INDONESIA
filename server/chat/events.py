@@ -34,6 +34,9 @@ def search_lazada(message):
     # }
     # emit('response_search_lazada', json.dumps(data))
     if message['keyword']:
+        ner_detail = bot.predict_keyword(message['keyword'])
+        emit('ner_keyword', ner_detail)
+       
         bot.start_bot(message['keyword'])
         bot.run_finding()
 

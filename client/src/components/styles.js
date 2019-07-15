@@ -19,6 +19,11 @@ export default theme => ({
         padding: "0px 15px",
         
     },
+    object_class:{
+        fontSize:"12px",
+        fontWeight:"bold",
+        padding:"5px"
+    },
     rootTitleText:{
         display:"flex",
         listStyle:"none",

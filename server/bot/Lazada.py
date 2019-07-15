@@ -48,6 +48,11 @@ class LazadaBot():
         self.keyword = ''
         print(self.isRunning)
 
+    def predict_keyword(self, data):
+        print(data)
+        ner = self.NER
+        print('adaaa',ner.predict_single(data))
+        return ner.predict_single(data)
     def get_list(self,bot):
         try:
             ner = self.NER  

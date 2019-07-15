@@ -25,11 +25,14 @@ import {
     InputBase,
     Divider,
     IconButton,
-    Checkbox
+    Checkbox,
+    LinearProgress,
+    Button
 } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import Slider from "react-slick";
 import io from './socket_io'
+import ProsesNer from './components/proses_ner'
 function prettyName(text) {
     if (text.length > 80) {
         text = text.substring(0, 72);
@@ -94,7 +97,7 @@ class App extends Component {
         }
         return (
             <div className={classes.root}>
-                <div className={classes.listPencarian}>
+                {/* <div className={classes.listPencarian}>
                     <Paper className={classes.paperTokok}>
                         <Checkbox checked={true} value="gilad" />
                         <p>LAZADA</p>
@@ -107,7 +110,7 @@ class App extends Component {
                         <Checkbox checked={true} value="gilad" />
                         <p>TOKOPEDIA</p>
                     </Paper>
-                </div>
+                </div> */}
                 <Grid container direction="column" alignContent="center" justify="center">
                     <Grid item md={12}>
                         <h1 className={classes.title} style={{textAlign:'center'}}>
@@ -117,27 +120,42 @@ class App extends Component {
                             Deskripsikan produk apa yang sedang anda cari
                         </p>
                     </Grid>
-                    <Grid item md={12}>
-                        <form onSubmit={this.handlerSubmitSearch}>
-                        <Paper className={classes.searchPaper}>
-                            <InputBase
-                                className={classes.input}
-                                placeholder="Ketik disini"
-                                value={keyword}
-                                onChange={this.handlerChangeText}
-                                inputProps={{ 'aria-label': 'Cari !' }}
-                            />
-                                <IconButton className={classes.iconButton} aria-label="Search" onClick={this.handlerSubmitSearch}>
-                                <SearchIcon fontSize='large' />
-                            </IconButton>
-                            
-                            
-                        </Paper>
+                    {!searchs.loading && (
+                        <Grid item md={12}>
+                            <form onSubmit={this.handlerSubmitSearch}>
+                                <Paper className={classes.searchPaper}>
+                                    <InputBase
+                                        className={classes.input}
+                                        placeholder="Ketik disini"
+                                        value={keyword}
+                                        onChange={this.handlerChangeText}
+                                        inputProps={{ 'aria-label': 'Cari !' }}
+                                    />
+                                    <IconButton className={classes.iconButton} aria-label="Search" onClick={this.handlerSubmitSearch}>
+                                        <SearchIcon fontSize='large' />
+                                    </IconButton>
 
-                        <span>*Contoh : laptop asus murah di bandung warna merah</span>
-                        </form>
-                    </Grid>
+
+                                </Paper>
+
+                                <span>*Contoh : laptop asus murah di bandung warna merah</span>
+                            </form>
+                        </Grid>
+                    )}
+                    {searchs.loading && (
+                        <Grid item md={12}>
+                            <LinearProgress variant="query" style={{padding:5,margin:'10px 0'}}/>
+                            <Button variant="contained" color="primary" fullWidth onClick={this.handlerStopCrawling}>    
+                                STOP CRAWLING
+                            </Button>
+                        </Grid>
+                    )}
+                  
                 </Grid>
+                <div style={{padding:10}}>
+                    <ProsesNer data={searchs} classes={classes} />           
+                </div>
+                 
                 <div style={{ marginTop: "50px" }}>
                     <List_Lazada data={searchs} classes={classes} handlerStopCrawling={this.handlerStopCrawling}/>
                 </div>

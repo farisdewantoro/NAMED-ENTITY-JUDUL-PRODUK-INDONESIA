@@ -5,7 +5,8 @@ import {
 const initialState = {
     product_lazada:[],
     product_lazada_length:0,
-    loading: false
+    loading: false,
+    keywords:[]
 };
 
 export default function (state = initialState, action) {
@@ -13,12 +14,14 @@ export default function (state = initialState, action) {
         case SEARCH.loading:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                keywords:action.payload
             }
         case SEARCH.remove_loading:
             return{
                 ...state,
-                loading:false
+                loading:false,
+                keywords:[]
             }
         case SEARCH.APPEND_LAZADA_PRODUCT:
             let slice = state.product_lazada;

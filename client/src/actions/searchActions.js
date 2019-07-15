@@ -1,15 +1,19 @@
 import axios from 'axios';
 import { SEARCH} from './types';
 import io from '../socket_io'
-export const loadingSearch = ()=>{
+export const loadingSearch = (data)=>{
     return{
-        type:SEARCH.loading
+        type:SEARCH.loading,
+        payload:data
     }
 }
 
 export const searchProduct = (keyword)=>disbatch=>{
-    disbatch(loadingSearch())
+   
     io.emit('search_lazada', {keyword:keyword})
+    io.on('ner_keyword',(data)=>{
+        disbatch(loadingSearch(data))
+    })
 }
 
 export const responseFromServer = ()=>disbatch=>{

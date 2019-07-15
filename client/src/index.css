@@ -41,13 +41,20 @@ li {
 .B-CAPACITY,
 .I-CAPACITY,
 .B-CPU,
-.I-CPU{
+.I-CPU,
+.B-SIZE,
+.I-SIZE {
     padding: 5px;
     color: white;
 }
 
+.B-SIZE,
+.I-SIZE {
+    background: #2236d2;
+}
+
 .B-CPU,
-.I-CPU{
+.I-CPU {
     background: #e8a573;
 }
 
@@ -57,35 +64,41 @@ li {
     padding: 5px;
     color: black;
 }
+
 .B-CAPACITY,
-.I-CAPACITY{
+.I-CAPACITY {
     background: #884725;
 }
+
 .B-DISPLAY,
-.I-DISPLAY{
-    background:#050569;
+.I-DISPLAY {
+    background: #050569;
 }
+
 .B-MATERIAL,
-.I-MATERIAL{
+.I-MATERIAL {
     background: black;
     padding: 5px;
     color: white;
 }
+
 .B-MEMORY,
-.I-MEMORY{
+.I-MEMORY {
     background: maroon;
 }
+
 .B-DIMENSION,
-.I-DIMENSION{
+.I-DIMENSION {
     background: gray;
 }
 
 .B-OS,
-.I-OS{
+.I-OS {
     background: #7643e0;
 }
+
 .B-RAM,
-.I-RAM{
+.I-RAM {
     background: #fba506;
 }
 
@@ -105,7 +118,7 @@ li {
 }
 
 .B-BRAND,
-.I-BRAND{
+.I-BRAND {
     background: #ec2c2c;
 }
 
