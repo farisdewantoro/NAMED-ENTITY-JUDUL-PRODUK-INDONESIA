@@ -24,9 +24,31 @@ li {
 .B-COLOR,
 .B-BRAND,
 .B-NAME,
-.B-PROCESSOR {
+.B-RAM,
+.I-RAM,
+.B-PROCESSOR,
+.I-PROCESSOR,
+.I-OS,
+.B-OS,
+.B-MATERIAL,
+.I-MATERIAL,
+.I-DIMENSION,
+.B-DIMENSION,
+.B-DISPLAY,
+.I-DISPLAY,
+.B-MEMORY,
+.I-MEMORY,
+.B-CAPACITY,
+.I-CAPACITY,
+.B-CPU,
+.I-CPU{
     padding: 5px;
     color: white;
+}
+
+.B-CPU,
+.I-CPU{
+    background: #e8a573;
 }
 
 .B-TYPE,
@@ -35,46 +57,66 @@ li {
     padding: 5px;
     color: black;
 }
-
-.B-TYPE {
-    background: #fdfd33;
+.B-CAPACITY,
+.I-CAPACITY{
+    background: #884725;
+}
+.B-DISPLAY,
+.I-DISPLAY{
+    background:#050569;
+}
+.B-MATERIAL,
+.I-MATERIAL{
+    background: black;
+    padding: 5px;
+    color: white;
+}
+.B-MEMORY,
+.I-MEMORY{
+    background: maroon;
+}
+.B-DIMENSION,
+.I-DIMENSION{
+    background: gray;
 }
 
-.B-NAME {
-    background: #8ef5d2;
+.B-OS,
+.I-OS{
+    background: #7643e0;
+}
+.B-RAM,
+.I-RAM{
+    background: #fba506;
 }
 
-.B-COLOR {
-    background: #5ae052;
-}
-
-.B-BRAND {
-    background: #ec2c2c;
-}
-
-.B-PROCESSOR {
-    background: #ff3eef;
-}
-
+.B-TYPE,
 .I-TYPE {
     background: #fdfd33;
 }
 
+.B-NAME,
 .I-NAME {
     background: #8ef5d2;
 }
 
+.B-COLOR,
 .I-COLOR {
     background: #5ae052;
 }
 
-.I-BRAND {
+.B-BRAND,
+.I-BRAND{
     background: #ec2c2c;
 }
 
+.B-PROCESSOR,
 .I-PROCESSOR {
     background: #ff3eef;
 }
+
+
+
+
 
 body {
     margin: 0;

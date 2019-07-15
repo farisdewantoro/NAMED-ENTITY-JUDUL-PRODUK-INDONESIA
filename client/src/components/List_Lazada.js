@@ -10,8 +10,9 @@ import {Card, CardContent, Button} from '@material-ui/core'
 // "DISPLAY": "DISPLAY", # 5 "MEMORY": "MEMORY", # 5 "CPU": "CPU", # 4 "CAMERA":
 // "CAMERA", # 4
 function renderTitle(data, classes) {
-   
+    let keys = Object.keys(data)
     let element =  keys.map(key=>{
+
         return (
             <li>
                 <span className={key}>
@@ -79,7 +80,7 @@ const List_Lazada = props => {
                                                 {d1 && d1.named_tag.map(d2=>{
                                                     return  renderTitle(d2, classes)
                                                 })}
-                                             
+
 
                                             </td>
 

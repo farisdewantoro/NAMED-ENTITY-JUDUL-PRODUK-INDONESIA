@@ -259,6 +259,8 @@ class NER:
         for row in lines:
             if parseEntity(row):
                 train_data.append(parseEntity(row))
+
+        print(train_data)
         # for row in lines[500:]:
         #     if parseEntity(row):
         #         train_test.append(parseEntity(row))
