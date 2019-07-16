@@ -117,7 +117,7 @@ TAGGER3.set_model_file(os.path.abspath(
 def getPOSTag(_temporary_tokens):
     strin = []
     for token_tag in _temporary_tokens:
-
+ 
         if token_tag[0].encode('ascii', 'ignore').decode('utf8'):
             strin.append(token_tag[0].encode('ascii', 'ignore').decode('utf8'))
     return [(str(token.encode('ascii', 'ignore'), 'utf8'), str(tag.encode('ascii', 'ignore'), 'utf8')) for (token, tag) in TAGGER3.tag_sents([strin])[0]]
@@ -295,7 +295,7 @@ class NER:
         text_feature = sent2features(text_pos)
         y_pred = crf.predict_single(text_feature)
         print(list(zip(y_pred,text_tokenize)))
-        result = [dict(zip(y_pred,text_tokenize))]
+        result = [list(zip(y_pred,text_tokenize))]
        
         return result
     def cfm(self):

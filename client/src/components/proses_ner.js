@@ -4,15 +4,16 @@ import PropTypes from 'prop-types'
 
 function renderTitle(data, classes) {
     let keys = Object.keys(data)
-    let element = keys.map(key => {
-
+    let element = data.map(key => {
+ 
+   
         return (
             <li style={{ display: 'grid' }}>
-                <span className={key}>
-                    {data[key]}
+                <span className={key[0]}>
+                    {key[1]}
                 </span>
                 <span className={classes.object_class}>
-                    {key}
+                    {key[0]}
                 </span>
             </li>
         )

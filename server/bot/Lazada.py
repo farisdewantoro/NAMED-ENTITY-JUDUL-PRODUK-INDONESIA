@@ -39,7 +39,7 @@ class LazadaBot():
         self.isRunning = False
         self.NER = NER()
         self.NER.train()
-
+        self.key_tagged =None
     def start_bot(self,keyword):
         self.isRunning = True
         self.keyword = keyword
@@ -51,7 +51,6 @@ class LazadaBot():
     def predict_keyword(self, data):
         print(data)
         ner = self.NER
-        print('adaaa',ner.predict_single(data))
         return ner.predict_single(data)
     def get_list(self,bot):
         try:
@@ -106,7 +105,7 @@ class LazadaBot():
                 img_link = False
             # final
             named_tag = ner.predict_single(title)
-            print(named_tag)
+            
             data = {
                 "title": title,
                 "link": link,
@@ -124,9 +123,11 @@ class LazadaBot():
 
     def run_finding(self):
         ner = self.NER
-        print(self.keyword.strip())
-        ner_detail = ner.predict_single(self.keyword)
-        emit('ner_keyword', ner_detail)
+        self.key_tagged = ner.predict_single(self.keyword.strip())
+        emit('ner_keyword', self.key_tagged)
+        print(self.key_tagged)
+        print(self.key_tagged[0].index('B-TYPE'))
+        print(50*"=")
         bot = webdriver.Firefox()
         bot.set_window_position(0, 0)
         bot.set_window_size(320, 480)
