@@ -21,6 +21,7 @@ from nltk.chunk import conlltags2tree, tree2conlltags
 from nltk.tokenize import RegexpTokenizer
 import csv
 from pprint import pprint
+from joblib import dump, load
 GLOBAL_INDEX = 0
 stemmer = StemmerFactory().create_stemmer()
 
@@ -252,26 +253,34 @@ class NER:
         )
 
     def train(self):
-        crf = self.crf
-        f = open(self.file_path)
-        lines = [line for line in f.read().split("\n")]
-        f.close()
-        for row in lines:
-            if parseEntity(row):
-                train_data.append(parseEntity(row))
+        model = load(os.path.abspath(
+            'server/nlp/data/model.joblib'))
+        if model:
+            self.crf = model
+            return model
+        else:
+            crf = self.crf
+            f = open(self.file_path)
+            lines = [line for line in f.read().split("\n")]
+            f.close()
+            for row in lines:
+                if parseEntity(row):
+                    train_data.append(parseEntity(row))
 
-        print(train_data)
-        # for row in lines[500:]:
-        #     if parseEntity(row):
-        #         train_test.append(parseEntity(row))
-        X_train = [sent2features(s) for s in train_data]
-        y_train = [sent2labels(s) for s in train_data]
-        # X_test = [sent2features(s) for s in train_test]
-        # y_test = [sent2labels(s) for s in train_test]
-        # print(train_data[0])
-        crf.fit(X_train, y_train)
-        self.crf = crf
-        return self.crf
+            print(train_data)
+            # for row in lines[500:]:
+            #     if parseEntity(row):
+            #         train_test.append(parseEntity(row))
+            X_train = [sent2features(s) for s in train_data]
+            y_train = [sent2labels(s) for s in train_data]
+            # X_test = [sent2features(s) for s in train_test]
+            # y_test = [sent2labels(s) for s in train_test]
+            # print(train_data[0])
+            crf.fit(X_train, y_train)
+            dump(crf, os.path.abspath(
+                'server/nlp/data/model.joblib'))
+            self.crf = crf
+            return self.crf
     def predict_single(self,input_text):
         crf = self.crf
         labels = list(crf.classes_)
@@ -281,12 +290,13 @@ class NER:
             key=lambda name: (name[1:], name[0])
         )
         text_tokenize = self.tokenize.tokenize(input_text)
+     
         text_pos = getPOSTagTesting(text_tokenize)
         text_feature = sent2features(text_pos)
         y_pred = crf.predict_single(text_feature)
-
+        print(list(zip(y_pred,text_tokenize)))
         result = [dict(zip(y_pred,text_tokenize))]
-   
+       
         return result
     def cfm(self):
         crf = self.crf
