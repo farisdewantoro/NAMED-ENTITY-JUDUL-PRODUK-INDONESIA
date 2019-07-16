@@ -15,3 +15,5 @@ def send_chat():
 @chat.route('/tes')
 def testing():
     return 'ada'
+
+

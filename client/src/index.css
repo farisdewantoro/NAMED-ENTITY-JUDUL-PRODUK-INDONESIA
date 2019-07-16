@@ -43,7 +43,11 @@ li {
 .B-CPU,
 .I-CPU,
 .B-SIZE,
-.I-SIZE {
+.I-SIZE,
+.B-GENDER,
+.I-GENDER,
+.B-AGE,
+.I-AGE {
     padding: 5px;
     color: white;
 }
@@ -56,6 +60,11 @@ li {
 .B-CPU,
 .I-CPU {
     background: #e8a573;
+}
+
+.B-GENDER,
+.I-GENDER {
+    background: pink;
 }
 
 .B-TYPE,
@@ -127,6 +136,10 @@ li {
     background: #ff3eef;
 }
 
+.B-AGE,
+.I-AGE {
+    background: #1d3561;
+}
 
 
 

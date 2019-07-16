@@ -8,7 +8,7 @@ import styles from './components/styles';
 import Lazada from './components/Lazada';
 import List_Lazada from './components/List_Lazada'
 import moment from 'moment';
-import { searchProduct, responseFromServer, stopSearch } from './actions/searchActions';
+import { searchProduct, responseFromServer, stopSearch, loadMore } from './actions/searchActions';
 import classNames from 'classnames';
 import {
     Grid,
@@ -33,6 +33,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Slider from "react-slick";
 import io from './socket_io'
 import ProsesNer from './components/proses_ner'
+import Summary from './components/Summary'
 function prettyName(text) {
     if (text.length > 80) {
         text = text.substring(0, 72);
@@ -63,6 +64,11 @@ class App extends Component {
         //     // })
         // })
     }
+  
+    loadFunc = ()=>{
+        console.log('LOAD MORE')
+        this.props.loadMore()
+    }
     handlerChangeText = (e)=>{
         this.setState({
             keyword:e.target.value
@@ -78,7 +84,7 @@ class App extends Component {
     render() {
         
         const { classes, searchs } = this.props;
-        const { keyword, product_lazada} = this.state;
+        const { keyword, product_lazada,hasMoreData} = this.state;
         var settings = {
             dots: true,
             infinite: true,
@@ -114,10 +120,10 @@ class App extends Component {
                 <Grid container direction="column" alignContent="center" justify="center">
                     <Grid item md={12}>
                         <h1 className={classes.title} style={{textAlign:'center'}}>
-                            APLIKASI PENCARI PRODUK
+                            APLIKASI EKTRAKSI ATTRIBUTE PRODUK
                         </h1>
                         <p className={classes.subTitle}>
-                            Deskripsikan produk apa yang sedang anda cari
+                            Ektraksi attribute yang terdapat pada judul produk
                         </p>
                     </Grid>
                     {!searchs.loading && (
@@ -138,7 +144,7 @@ class App extends Component {
 
                                 </Paper>
 
-                                <span>*Contoh : laptop asus murah di bandung warna merah</span>
+                                <span>*Keyword: laptop, handphone, baju, mouse dll</span>
                             </form>
                         </Grid>
                     )}
@@ -152,14 +158,21 @@ class App extends Component {
                     )}
                   
                 </Grid>
-                <div style={{padding:10}}>
+                {/* <div style={{padding:10}}>
+                    
                     <ProsesNer data={searchs} classes={classes} />           
-                </div>
+                </div> */}
+               
                  
-                <div style={{ marginTop: "50px" }}>
-                    <List_Lazada data={searchs} classes={classes} handlerStopCrawling={this.handlerStopCrawling}/>
+                <div style={{ marginTop: "10px" }}>
+                    <List_Lazada 
+                    data={searchs} 
+                    classes={classes} 
+                    hasMoreData={searchs.hasMoreData} 
+                    loadFunc={this.loadFunc}
+                    handlerStopCrawling={this.handlerStopCrawling}/>
                 </div>
-             
+                <Summary classes={classes} data={searchs} />
               
                
             </div>
@@ -175,4 +188,4 @@ App.propTypes = {
 const mapStateToProps = (state) => ({
     searchs: state.searchs
 })
-export default compose(withStyles(styles), connect(mapStateToProps, { searchProduct, responseFromServer, stopSearch }))(App);
+export default compose(withStyles(styles), connect(mapStateToProps, { loadMore,searchProduct, responseFromServer, stopSearch }))(App);

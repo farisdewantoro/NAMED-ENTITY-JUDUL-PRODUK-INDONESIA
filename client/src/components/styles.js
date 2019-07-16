@@ -9,6 +9,16 @@ export default theme => ({
     root:{
         margin:'20px 0',
     },
+    rootExpand: {
+        width: '100%',
+    },
+    listPanel: {
+      width:"100%"
+    },
+    secondaryHeading: {
+        fontSize: theme.typography.pxToRem(15),
+        color: theme.palette.text.secondary,
+    },
     listPencarian:{
         position:"absolute"
     },

@@ -225,9 +225,13 @@ def parseEntity(data):
     if(temporary_tokens):
 
         postageed = getPOSTag(temporary_tokens)
-    
+ 
         for i in range(len(temporary_tokens)):
             str_postagged = None
+            print(postageed)
+            print(50*"=")
+            print(postageed[i][0])
+            print(50*"=")
             str_append = (postageed[i][0], postageed[i][1], str(
                 temporary_tokens[i][1].encode('ascii', 'ignore'), 'utf8'))
             result.append(str_append)
@@ -253,9 +257,11 @@ class NER:
         )
 
     def train(self):
-        model = load(os.path.abspath(
-            'server/nlp/data/model.joblib'))
-        if model:
+        model = os.path.abspath(
+            'server/nlp/data/model.joblib')
+        if os.path.exists(model):
+            model = load(os.path.abspath(
+                'server/nlp/data/model.joblib'))
             self.crf = model
             return model
         else:
@@ -267,7 +273,6 @@ class NER:
                 if parseEntity(row):
                     train_data.append(parseEntity(row))
 
-            print(train_data)
             # for row in lines[500:]:
             #     if parseEntity(row):
             #         train_test.append(parseEntity(row))

@@ -1,14 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Card, CardContent, Button} from '@material-ui/core'
-// "TYPE": "TYPE", # 2119 "BRAND": "BRAND", # 1099 "NAME": "NAME", # 733
-// "COLOR": "COLOR", # 414 "MATERIAL": "MATERIAL", # 202 "THEME": "THEME", # 161
-// "DIMENSION": "DIMENSION", # 148 "GENDER": "GENDER", # 140 "SIZE": "SIZE", #
-// 122 "MASS": "MASS", # 95 "AGE": "AGE", # 74 "SHAPE": "SHAPE", # 30
-// "CAPACITY": "CAPACITY", # 52 "RAM": "RAM", # 24 "OS": "OS", # 15 "PROCESSOR":
-// "PROCESSOR", # 14 "GRAPHIC": "GRAPHIC", # 7 "STORAGE": "STORAGE", # 7
-// "DISPLAY": "DISPLAY", # 5 "MEMORY": "MEMORY", # 5 "CPU": "CPU", # 4 "CAMERA":
-// "CAMERA", # 4
+import InfiniteScroll from 'react-infinite-scroller';
+
 function renderTitle(data, classes) {
     let keys = Object.keys(data)
     let element =  data.map(key=>{
@@ -27,9 +21,14 @@ function renderTitle(data, classes) {
    return element
 }
 
+function scrollingFunc(e){
+    console.log('ada')
+    console.log(e)
+}
+
 const List_Lazada = props => {
 
-    const {classes, data, handlerStopCrawling} = props;
+    const { classes, data, handlerStopCrawling, hasMoreData, loadFunc} = props;
     const NoImg = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg' +
             '/480px-No_image_available.svg.png'
 
@@ -38,9 +37,6 @@ const List_Lazada = props => {
         <Card>
             <CardContent>
                 <div>
-              
-
-               
                     <h1
                         className={classes.titleProductRoot}
                         style={{
@@ -53,17 +49,29 @@ const List_Lazada = props => {
                 <div
                     className='table-responsive'
                     style={{
-                    maxHeight: 400
-                }}>
+                        height:300,
+                        overflow:'auto'
+                    }}
+                    >
+                    {/* <InfiniteScroll
+                        pageStart={1}
+                        loadMore={loadFunc}
+                        hasMore={hasMoreData}
+                        loader={<div className="loader" key={0}>Loading ...</div>}
+                        getScrollParent={scrollingFunc}
+                        useWindow={false}
+                    > */}
                     <table className="table">
                         <tbody>
+                       
+                                
                             {data
                                 .product_lazada
                                 .map((d1, i) => {
                                     return (
                                         <tr >
 
-                                            <td className={classes.rootTitleText}>
+                                            <td className={classes.rootTitleText} onClick={() => window.open(d1.link,'_blank')}>
                                                 {d1 && d1.named_tag.map(d2=>{
                                                     return  renderTitle(d2, classes)
                                                 })}
@@ -75,51 +83,13 @@ const List_Lazada = props => {
                                     )
 
                                 })}
-                        </tbody>
-                        {/* <thead>
-                            <tr>
-                                <th>
-                                    NO
-                      </th>
-                                <th>
-                                    TITLE
-                      </th>
-                                <th>
-                                    PRICE
-                      </th>
-                                <th>
-                                    LOCATION
-                      </th>
-                            </tr>
-                        </thead> */}
-                        {/* <tbody>
-                            {data.product_lazada.map((d, i) => {
-                                return (
-                                    <tr onClick={()=>window.open(d.link,'_blank')}>
-                                        <td>
-                                            {i + 1}
-                                        </td>
-                                        <td>
-                                            {d.title}
-                                        </td>
-                                        <td>
-                                            {d.price_now}
-                                            <br />
-                                            <del>
-                                                {d.discount_price} &nbsp; {d.discount_percent}
-                                            </del>
 
-                                        </td>
-                                        <td>
-                                            {d.location}
-                                        </td>
-                                    </tr>
-                                )
-                            })}
-                        </tbody> */}
+                        
+                        </tbody>
+                   
 
                     </table>
-
+                    {/* </InfiniteScroll> */}
                 </div>
             </CardContent>
         </Card>

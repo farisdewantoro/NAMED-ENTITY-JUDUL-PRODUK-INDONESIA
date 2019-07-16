@@ -122,12 +122,12 @@ class LazadaBot():
             return None
 
     def run_finding(self):
-        ner = self.NER
-        self.key_tagged = ner.predict_single(self.keyword.strip())
-        emit('ner_keyword', self.key_tagged)
-        print(self.key_tagged)
-        print(self.key_tagged[0].index('B-TYPE'))
-        print(50*"=")
+        # ner = self.NER
+        # self.key_tagged = ner.predict_single(self.keyword.strip())
+        # emit('ner_keyword', self.key_tagged)
+        # print(self.key_tagged)
+        # print(50*"=")
+        # print(self.key_tagged[0].index('B-TYPE'))
         bot = webdriver.Firefox()
         bot.set_window_position(0, 0)
         bot.set_window_size(320, 480)

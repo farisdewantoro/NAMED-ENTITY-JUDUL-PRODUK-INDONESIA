@@ -9,10 +9,16 @@ export const loadingSearch = (data)=>{
 }
 
 export const searchProduct = (keyword)=>disbatch=>{
-   
+    disbatch(loadingSearch())
     io.emit('search_lazada', {keyword:keyword})
-    io.on('ner_keyword',(data)=>{
-        disbatch(loadingSearch(data))
+    // io.on('ner_keyword',(data)=>{
+    //     disbatch(loadingSearch(data))
+    // })
+}
+
+export const loadMore =()=>disbatch=>{
+    disbatch({
+        type:SEARCH.loadMore
     })
 }
 
