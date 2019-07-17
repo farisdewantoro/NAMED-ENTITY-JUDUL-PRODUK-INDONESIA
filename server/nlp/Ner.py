@@ -230,8 +230,6 @@ def parseEntity(data):
             str_postagged = None
             print(postageed)
             print(50*"=")
-            print(postageed[i][0])
-            print(50*"=")
             str_append = (postageed[i][0], postageed[i][1], str(
                 temporary_tokens[i][1].encode('ascii', 'ignore'), 'utf8'))
             result.append(str_append)
@@ -282,6 +280,18 @@ class NER:
             # y_test = [sent2labels(s) for s in train_test]
             # print(train_data[0])
             crf.fit(X_train, y_train)
+          
+            # state_features = crf.state_features_
+            # out = zip(state_features.keys(), state_features.values())
+            # with open(os.path.abspath(
+            #         'server/nlp/data/data_features.csv'), 'w', encoding="utf8",newline="") as csv_feature:
+            #     writer = csv.writer(csv_feature)
+            #     writer.writerow(['key','value'])
+            #     for i in out:
+            #         writer.writerow(i)
+            # csv_feature.close()
+
+
             dump(crf, os.path.abspath(
                 'server/nlp/data/model.joblib'))
             self.crf = crf
@@ -299,7 +309,7 @@ class NER:
         text_pos = getPOSTagTesting(text_tokenize)
         text_feature = sent2features(text_pos)
         y_pred = crf.predict_single(text_feature)
-        print(list(zip(y_pred,text_tokenize)))
+        # print(list(zip(y_pred,text_tokenize)))
         result = [list(zip(y_pred,text_tokenize))]
        
         return result

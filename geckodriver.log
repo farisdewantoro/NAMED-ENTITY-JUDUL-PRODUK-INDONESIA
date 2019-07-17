@@ -7220,17 +7220,21 @@ WebGL(0000020B53620000)::ForceLoseContext
 WebGL(0000020B4E50E000)::ForceLoseContext
 WebGL(0000020B5362F800)::ForceLoseContext
 WebGL(0000020B4E599800)::ForceLoseContext
-1563297285576	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\m\\AppData\\Local\\Temp\\rust_mozprofile.xW8EnoWJxL1W"
-1563297286240	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1563297286241	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1563297286241	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1563297286241	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
-WARN: compileToBinary(259): 
-C:\fakepath(334,18-133): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
-C:\fakepath(340,62-116): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
-C:\fakepath(363,75-84): warning X3556: integer divides may be much slower, try using uints if possible.
-C:\fakepath(366,50-59): warning X3556: integer modulus may be much slower, try using uints if possible.
-C:\fakepath(382,33-90): warning X3571: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+[Parent 15496, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 15496, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1992, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 1992, Chrome_ChildThread] WARNIN[Parent 15496, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13812, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 13812, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_[Parent 15496, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14356, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 14356, Chrome_ChildThread] WAR1563297477519	Marionette	INFO	Stopped listening on port 60635
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 16948, 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+71: pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
 C:\fakepath(172,1-6): warning X4000: use of potentially uninitialized variable (dyn_index_vec4_float4)
 C:\fakepath(287,25-29): error X4576: Input array signature parameter  cannot be indexed dynamically.
 
@@ -7256,3 +7260,18 @@ C:\fakepath(260,1): warning X4000: use of potentially uninitialized variable (f_
 1563297290491	Marionette	WARN	TLS certificate errors will be ignored for this session
 WebGL(00000270A1E53800)::ForceLoseContext
 WebGL(00000270A4C56000)::ForceLoseContext
+[Parent 15016, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 15580, Chrome_ChildThread] WARNING: pipe error[P: 10arent 150916: file z, :/task_15G6ecko_IOT2h361253/bruild/srcead/i] WARNING: pipe error: 109: fpile c/chromium/src/cz:/hrome/ctask_o1562361253/buildm/mon/ipc_chasrc/innel_win.ccpc/, line 341
+chromium/src/chrome/common/ipc[Chi_chld ann15580, Chrel_woin.cc, line 341
+[Child 4664, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 4664, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Parent 15016, Gecko_IOThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7996, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+[Child 7996, Chrome_ChildThread] WARNING: pipe error: 109: file z:/task_1562361253/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 341
+1563297476256	Marionette	INFO	Stopped listening on port 60958
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+[GPU 
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
