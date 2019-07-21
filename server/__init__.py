@@ -29,11 +29,13 @@ def server_app(config_class=Config):
     # ma.init_app(app)
     
     with app.app_context():
-        # from server.users.routes import users
         from server.chat.routes import chat
+        from server.api.routes import api
+        app.register_blueprint(api,url_prefix='/api')
         app.register_blueprint(chat)
-        @app.route('/')
-        def home():
+        @app.route('/', defaults={'path': ''})
+        @app.route('/<path:path>')
+        def catch_all(path):
             return render_template('index.html')
 
         # db.create_all()

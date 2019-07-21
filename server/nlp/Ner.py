@@ -22,6 +22,7 @@ from nltk.tokenize import RegexpTokenizer
 import csv
 from pprint import pprint
 from joblib import dump, load
+import eli5
 GLOBAL_INDEX = 0
 stemmer = StemmerFactory().create_stemmer()
 
@@ -30,7 +31,12 @@ def word2features(sent, i):
 
     word = sent[i][0]
     postag = sent[i][1]
-
+    # print('nilai i',i)
+    # print('word = ',word)
+    # print('pos = ',postag)
+    # print('sent = ',sent)
+    # print('sent-length = ',len(sent))
+    # print(50*"=")
     features = {
         'bias': 1.0,
         'word.lower()': word.lower(),
@@ -40,7 +46,7 @@ def word2features(sent, i):
         'word.istitle()': word.istitle(),
         'word.isdigit()': word.isdigit(),
         'postag': postag,
-        'postag[:2]': postag[:2],
+        'postag[:2]': postag[:2]
     }
     if i > 0:
         word1 = sent[i-1][0]
@@ -67,7 +73,7 @@ def word2features(sent, i):
         })
     else:
         features['EOS'] = True
-
+    # print('FEATURES = ',features)
     return features
 
 
@@ -228,8 +234,7 @@ def parseEntity(data):
  
         for i in range(len(temporary_tokens)):
             str_postagged = None
-            print(postageed)
-            print(50*"=")
+          
             str_append = (postageed[i][0], postageed[i][1], str(
                 temporary_tokens[i][1].encode('ascii', 'ignore'), 'utf8'))
             result.append(str_append)
@@ -251,31 +256,35 @@ class NER:
             c1=0.1,
             c2=0.1,
             max_iterations=100,
-            all_possible_transitions=True
+            all_possible_transitions=True,
+            verbose=False
         )
 
     def train(self):
         model = os.path.abspath(
-            'server/nlp/data/model.joblib')
+            '1server/nlp/data/model.joblib')
+
         if os.path.exists(model):
-            model = load(os.path.abspath(
-                'server/nlp/data/model.joblib'))
+            model = load(model)
             self.crf = model
             return model
         else:
+            print('CREATE MODEL')
             crf = self.crf
             f = open(self.file_path)
             lines = [line for line in f.read().split("\n")]
             f.close()
-            for row in lines:
+            for row in lines[:5]:
                 if parseEntity(row):
                     train_data.append(parseEntity(row))
 
             # for row in lines[500:]:
             #     if parseEntity(row):
             #         train_test.append(parseEntity(row))
+          
             X_train = [sent2features(s) for s in train_data]
             y_train = [sent2labels(s) for s in train_data]
+            
             # X_test = [sent2features(s) for s in train_test]
             # y_test = [sent2labels(s) for s in train_test]
             # print(train_data[0])
@@ -292,10 +301,36 @@ class NER:
             # csv_feature.close()
 
 
-            dump(crf, os.path.abspath(
-                'server/nlp/data/model.joblib'))
+            # dump(crf, os.path.abspath(
+            #     'server/nlp/data/model.joblib'))
             self.crf = crf
+            # weight = eli5.show_weights(crf, top=30)
+            # print(dir(eli5))
+          
+            # for i in data_frame:
+            #     print(data_frame[i])
+            # pd = df.DataFrame(data_frame, index=True)
+            # print(data_frame['targets'].to_html())
+            # data_frame['targets'].to_csv(os.path.abspath(
+            #     'server/nlp/data/data_feature_targets.csv'))
+            # data_frame['transition_features'].to_csv(os.path.abspath(
+            #     'server/nlp/data/data_transition_features.csv'))
+            # pprint(dir(self.crf))
+            # pprint(self.crf.state_features_)
+            # pprint(self.crf.training_log_.iterations)
+    
+     
             return self.crf
+    def weight_targets(self):
+        data_frame = eli5.format_as_dataframes(
+            eli5.explain_weights_sklearn_crfsuite(self.crf, top=50))
+
+        return list(zip(data_frame['targets']['target'], data_frame['targets']['feature'], data_frame['targets']['weight']))
+    def transition_features(self):
+        data_frame = eli5.format_as_dataframes(
+            eli5.explain_weights_sklearn_crfsuite(self.crf))
+        return list(zip(data_frame['transition_features']['from'],
+                        data_frame['transition_features']['coef'], data_frame['transition_features']['to']))
     def predict_single(self,input_text):
         crf = self.crf
         labels = list(crf.classes_)
@@ -309,6 +344,7 @@ class NER:
         text_pos = getPOSTagTesting(text_tokenize)
         text_feature = sent2features(text_pos)
         y_pred = crf.predict_single(text_feature)
+    
         # print(list(zip(y_pred,text_tokenize)))
         result = [list(zip(y_pred,text_tokenize))]
        

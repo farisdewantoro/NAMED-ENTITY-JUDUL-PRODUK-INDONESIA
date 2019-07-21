@@ -52,17 +52,7 @@ class App extends Component {
     }
     componentDidMount(){
         this.props.responseFromServer()
-        // io.on('response_search_lazada', (data) => {
-        //     const res = JSON.parse(data)
-        //     this.setState({
-        //         product_lazada:[...res,...this.state.product_lazada]
-        //     })
-          
-        //     // disbatch({
-        //     //     type: SEARCH.APPEND_LAZADA_PRODUCT,
-        //     //     payload: JSON.parse(data)
-        //     // })
-        // })
+    
     }
   
     loadFunc = ()=>{

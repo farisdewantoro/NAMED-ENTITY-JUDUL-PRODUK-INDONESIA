@@ -9,7 +9,7 @@ import re
 import json
 import csv
 from flask_socketio import emit
-from ..nlp.Ner import NER
+from ..nlp import NER
 
 
 
@@ -49,9 +49,13 @@ class LazadaBot():
         print(self.isRunning)
 
     def predict_keyword(self, data):
-        print(data)
         ner = self.NER
         return ner.predict_single(data)
+    def get_weights_target(self):
+        ner = self.NER
+        return ner.weight_targets()
+    def get_transition_features(self):
+        return self.NER.transition_features()
     def get_list(self,bot):
         try:
             ner = self.NER  
@@ -123,7 +127,9 @@ class LazadaBot():
 
     def run_finding(self):
         # ner = self.NER
-        # self.key_tagged = ner.predict_single(self.keyword.strip())
+        # key = self.NER.predict_single(self.keyword.strip())
+        # print(key)
+        # return
         # emit('ner_keyword', self.key_tagged)
         # print(self.key_tagged)
         # print(50*"=")
@@ -192,7 +198,7 @@ class LazadaBot():
             #     ]
             #     writer = csv.DictWriter(csv_file, fieldnames)
             for list_p2 in product:
-                if list_p2:
+                if list_p2 and self.isRunning:
                     emit('response_search_lazada', json.dumps(list_p2))
                     # pprint(list_p2)
                     # writer.writerow(list_p2)

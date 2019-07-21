@@ -150,29 +150,59 @@ body {
     font-family: sans-serif;
 }
 
-.table {
+.dataframe thead th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    text-transform: capitalize;
+}
+
+.dataframe tbody th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    text-transform: capitalize;
+}
+
+.dataframe {
+    border: 0;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+}
+
+.table,
+.dataframe {
     width: 100%;
     max-width: 100%;
     margin-bottom: 1rem;
 }
 
 .table th,
-.table td {
+.dataframe th,
+.table td,
+.dataframe td {
     padding: 0.75rem;
     vertical-align: top;
     border-top: 1px solid #eceeef;
 }
 
-.table thead th {
+.table thead th,
+.dataframe thead th {
     vertical-align: bottom;
     border-bottom: 2px solid #eceeef;
 }
 
-.table tbody+tbody {
+.table tbody+tbody,
+.dataframe tbody+tbody {
     border-top: 2px solid #eceeef;
 }
 
-.table .table {
+.table .table,
+.dataframe .dataframe {
     background-color: #fff;
 }
 
@@ -197,6 +227,12 @@ body {
 
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+.standar {
+    background: none;
+    color: black;
+    text-align: center;
 }
 
 .table-hover tbody tr:hover {
