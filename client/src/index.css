@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700,800,900|Roboto:400,500,700,700i&display=swap');
+
+/* html {
+    background: #e6e6e6
+} */
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Staatliches');
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,500,700,900');
+
+
+
+li {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+
+/* .I-COLOR,
+.I-BRAND,
+.I-NAME,
+.B-COLOR,
+.B-BRAND,
+.B-NAME,
+.B-RAM,
+.I-RAM,
+.B-PROCESSOR,
+.I-PROCESSOR,
+.I-OS,
+.B-OS,
+.B-MATERIAL,
+.I-MATERIAL,
+.I-DIMENSION,
+.B-DIMENSION,
+.B-DISPLAY,
+.I-DISPLAY,
+.B-MEMORY,
+.I-MEMORY,
+.B-CAPACITY,
+.I-CAPACITY,
+.B-CPU,
+.I-CPU,
+.B-SIZE,
+.I-SIZE,
+.B-GENDER,
+.I-GENDER,
+.B-AGE,
+.I-AGE {
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+} */
+
+.B-SIZE,
+.I-SIZE {
+    background: #2236d2;
+}
+
+.B-CPU,
+.I-CPU {
+    background: #e8a573;
+}
+
+.B-GENDER,
+.I-GENDER {
+    background: pink;
+}
+
+.B-TYPE,
+.I-TYPE,
+.B-ORG,
+.I-ORG,
+.B-LOC,
+.I-LOC,
+.B-PER,
+.I-PER,
+.I-COLOR,
+.I-BRAND,
+.I-NAME,
+.B-COLOR,
+.B-BRAND,
+.B-NAME,
+.B-RAM,
+.I-RAM,
+.B-PROCESSOR,
+.I-PROCESSOR,
+.I-OS,
+.B-OS,
+.B-MATERIAL,
+.I-MATERIAL,
+.I-DIMENSION,
+.B-DIMENSION,
+.B-DISPLAY,
+.I-DISPLAY,
+.B-MEMORY,
+.I-MEMORY,
+.B-CAPACITY,
+.I-CAPACITY,
+.B-CPU,
+.I-CPU,
+.B-SIZE,
+.I-SIZE,
+.B-GENDER,
+.I-GENDER,
+.B-AGE,
+.I-AGE, .O {
+    margin: 0px 2px;
+    padding: 5px;
+    color: black;
+    border-radius: 5px;
+}
+
+.B-CAPACITY,
+.I-CAPACITY {
+    background: #884725;
+}
+
+.B-PER,
+.I-PER {
+    background: #ef60b4;
+}
+
+.B-DISPLAY,
+.I-DISPLAY {
+    background: #050569;
+}
+
+.B-MATERIAL,
+.I-MATERIAL {
+    background: black;
+    padding: 5px;
+    color: white;
+}
+
+.B-MEMORY,
+.I-MEMORY {
+    background: maroon;
+}
+
+.B-DIMENSION,
+.I-DIMENSION {
+    background: gray;
+}
+
+.B-OS,
+.I-OS {
+    background: #7643e0;
+}
+
+.B-RAM,
+.I-RAM {
+    background: #fba506;
+}
+
+.B-LOC,
+.I-LOC {
+    background: #43c6fc
+}
+
+
+.B-TYPE,
+.I-TYPE {
+    background: #fdfd33;
+}
+
+.B-NAME,
+.I-NAME {
+    background: #8ef5d2;
+}
+
+.B-ORG,
+.I-ORG {
+    background: #a6e22d;
+}
+
+.B-COLOR,
+.I-COLOR {
+    background: #5ae052;
+}
+
+.B-BRAND,
+.I-BRAND {
+    background: #ec2c2c;
+}
+
+.B-PROCESSOR,
+.I-PROCESSOR {
+    background: #ff3eef;
+}
+
+.B-AGE,
+.I-AGE {
+    background: #1d3561;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.dataframe thead th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    text-transform: capitalize;
+}
+
+.dataframe tbody th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    text-transform: capitalize;
+}
+
+.dataframe {
+    border: 0;
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+}
+
+.table,
+.dataframe {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.table th,
+.dataframe th,
+.table td,
+.dataframe td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #eceeef;
+}
+
+.table thead th,
+.dataframe thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #eceeef;
+}
+
+.table tbody+tbody,
+.dataframe tbody+tbody {
+    border-top: 2px solid #eceeef;
+}
+
+.table .table,
+.dataframe .dataframe {
+    background-color: #fff;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem;
+}
+
+.table-bordered {
+    border: 1px solid #eceeef;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #eceeef;
+}
+
+.table-bordered thead th,
+.table-bordered thead td {
+    border-bottom-width: 2px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.standar {
+    background: none;
+    color: black;
+    text-align: center;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-active,
+.table-active>th,
+.table-active>td {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover>td,
+.table-hover .table-active:hover>th {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-success,
+.table-success>th,
+.table-success>td {
+    background-color: #dff0d8;
+}
+
+.table-hover .table-success:hover {
+    background-color: #d0e9c6;
+}
+
+.table-hover .table-success:hover>td,
+.table-hover .table-success:hover>th {
+    background-color: #d0e9c6;
+}
+
+.table-info,
+.table-info>th,
+.table-info>td {
+    background-color: #d9edf7;
+}
+
+.table-hover .table-info:hover {
+    background-color: #c4e3f3;
+}
+
+.table-hover .table-info:hover>td,
+.table-hover .table-info:hover>th {
+    background-color: #c4e3f3;
+}
+
+.table-warning,
+.table-warning>th,
+.table-warning>td {
+    background-color: #fcf8e3;
+}
+
+.table-hover .table-warning:hover {
+    background-color: #faf2cc;
+}
+
+.table-hover .table-warning:hover>td,
+.table-hover .table-warning:hover>th {
+    background-color: #faf2cc;
+}
+
+.table-danger,
+.table-danger>th,
+.table-danger>td {
+    background-color: #f2dede;
+}
+
+.table-hover .table-danger:hover {
+    background-color: #ebcccc;
+}
+
+.table-hover .table-danger:hover>td,
+.table-hover .table-danger:hover>th {
+    background-color: #ebcccc;
+}
+
+.thead-inverse th {
+    color: #fff;
+    background-color: #292b2c;
+}
+
+.thead-default th {
+    color: #464a4c;
+    background-color: #eceeef;
+}
+
+.table-inverse {
+    color: #fff;
+    background-color: #292b2c;
+}
+
+.table-inverse th,
+.table-inverse td,
+.table-inverse thead th {
+    border-color: #fff;
+}
+
+.table-inverse.table-bordered {
+    border: 0;
+}
+
+[data-entity]:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: attr(data-entity);
+    font-size: .55em;
+    line-height: 1;
+    padding: .35em .35em;
+    border-radius: .35em;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 .15rem .5rem;
+    background: #fff;
+    color: "black !important";
+    font-weight: 700;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.table-responsive.table-bordered {
+    border: 0;
+}

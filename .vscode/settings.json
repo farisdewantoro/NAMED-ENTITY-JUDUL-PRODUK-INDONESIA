@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "env\\Scripts\\python.exe",
+    "files.exclude": {
+        "**/.git": false,
+        "**/__pycache__": true,
+        "**/env": false,
+        "**/node_modules": true
+    },
+    "editor.formatOnSave": false
+}
