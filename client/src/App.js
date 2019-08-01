@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
@@ -156,18 +156,22 @@ class App extends Component {
                     <ProsesNer data={searchs} classes={classes} />           
                 </div> */}
                
-                 
-                <div style={{ marginTop: "10px" }}>
-                    {/* <Article data={searchs}
+                {searchs.product_lazada.length > 0 && (
+                      <Fragment>
+                        <div style={{ marginTop: "10px" }}>
+                            {/* <Article data={searchs}
                         classes={classes} /> */}
-                    <List_Lazada 
-                    data={searchs} 
-                    classes={classes} 
-                    hasMoreData={searchs.hasMoreData} 
-                    loadFunc={this.loadFunc}
-                    handlerStopCrawling={this.handlerStopCrawling}/>
-                </div>
-                <Summary classes={classes} data={searchs} />
+                            <List_Lazada
+                                data={searchs}
+                                classes={classes}
+                                hasMoreData={searchs.hasMoreData}
+                                loadFunc={this.loadFunc}
+                                handlerStopCrawling={this.handlerStopCrawling} />
+                        </div>
+                        <Summary classes={classes} data={searchs} />
+                      </Fragment>  
+                ) }
+          
               
                
             </div>

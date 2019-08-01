@@ -2,9 +2,10 @@ from sklearn_crfsuite import metrics
 from sklearn_crfsuite import scorers
 import sklearn_crfsuite
 from sklearn_crfsuite.utils import flatten
-from sklearn.metrics import make_scorer, classification_report, confusion_matrix
+from sklearn.metrics import make_scorer, classification_report, confusion_matrix,multilabel_confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
+import sys
 import scipy.stats
 import sklearn
 from itertools import chain
@@ -68,7 +69,7 @@ def word2features(sent, i):
             '-1:stopword': True if word1 in stopwords else False,
             '-1:word.isupper()': word1.isupper(),
             '-1:postag': postag1,
-            
+            '-1:word.isdigit()': word.isdigit(),
             '-1:postag[:2]': postag1[:2],
             
         })
@@ -81,10 +82,11 @@ def word2features(sent, i):
  
         features.update({
             '+1:word.lower()': word1.lower(),
+            '+1:stopword': True if word1 in stopwords else False,
             '+1:word.istitle()': word1.istitle(),
             '+1:word.isupper()': word1.isupper(),
-            '+1:stopword': True if word1 in stopwords else False,
             '+1:postag': postag1,
+            '+1:word.isdigit()': word.isdigit(),
             '+1:postag[:2]': postag1[:2],
         })
     else:
@@ -311,11 +313,11 @@ class NER:
         self.crf = sklearn_crfsuite.CRF(
             algorithm='l2sgd',
             max_iterations=1000,
-            all_possible_transitions=False,
+            all_possible_transitions=True,
             verbose=True,
-            calibration_rate=0.005,
-            calibration_eta=0.075
-            
+            calibration_rate=0.1,
+            calibration_eta=0.1
+
         )
     def state_features_to_csv(self):
         data_frame = eli5.format_as_dataframes(
@@ -337,9 +339,28 @@ class NER:
     def print_transitions(self,trans_features):
         for (label_from, label_to), weight in trans_features:
             print("%-6s -> %-7s %0.6f" % (label_from, label_to, weight))
+
+    def re_format(self,data):
+        result = []
+        for i in range(len(data)):
+            B = re.match(r'^(B-)',data[i])
+            I = re.match(r'^(I-)',data[i])
+            d = re.sub(r'^(B-|I-)', '', data[i])
+            _d = re.sub(r'^(B-|I-)', '', data[i-1])
+            if B:
+                result.append(d)
+            elif I:
+                if _d != d:
+                    result.append(d)
+            else:
+                result.append(d)
+        return result
+    def re_format_class(self,data):
+        labels = set(map(lambda x: re.sub(r'^(B-|I-)', '', x), data))
+        return list(labels)
     def train(self):
         model = os.path.abspath(
-            'server/nlp/data/model.joblib')
+            '1server/nlp/data/model.joblib')
 
         if os.path.exists(model):
             model = load(model)
@@ -357,7 +378,7 @@ class NER:
                 if parseEntity(row):
                 
                     train_data.append(parseEntity(row))
-
+           
             # for row in lines[1500:]:
             #     if parseEntity(row):
             #         train_test.append(parseEntity(row))
@@ -381,16 +402,30 @@ class NER:
             score = metrics.flat_classification_report(
                 y_test, y_pred, labels=new_classes, digits=3
             )
-
+            print(score)
+         
             # y_true = flatten(y_test)
             # y_pred = flatten(y_pred)
-           
-            # score = confusion_matrix(
-            #     y_true, y_pred
+            # re_format_labels = self.re_format_class(new_classes)
+            # re_format_iob_y_true = self.re_format(y_true)
+            # re_format_iob_y_pred = self.re_format(y_pred)
+            
+            # hasil  = multilabel_confusion_matrix(
+            #     re_format_iob_y_true, re_format_iob_y_pred, labels=re_format_labels
             # )
-            print(score)
-            print("Top likely transitions:")
-            self.print_transitions(Counter(crf.transition_features_).most_common(20))
+            # np.set_printoptions(threshold=sys.maxsize)
+            # tn = hasil[:, 0, 0]
+            # tp = hasil[:, 1, 1]
+            # fn = hasil[:, 1, 0]
+            # fp = hasil[:, 0, 1]
+            # pprint(tn)
+            # pprint(tp)
+            # pprint(fn)
+            # pprint(fp)
+            
+
+            # print("Top likely transitions:")
+            # self.print_transitions(Counter(crf.transition_features_).most_common(20))
             # state_features = crf.state_features_
             # out = zip(state_features.keys(), state_features.values())
             # with open(os.path.abspath(

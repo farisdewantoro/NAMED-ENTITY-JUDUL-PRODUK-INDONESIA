@@ -76,7 +76,7 @@ const List_Lazada = props => {
                                     <Card style={{marginTop:5}}>
                                         <CardContent>
 
-                                            <Grid container direction="row" spacing={8}>
+                                            <Grid container direction="row" alignContent="center" alignItems="center" spacing={8}>
                                                 <Grid item xs={4}>
                                                     <img src={d1.img_link} style={{
                                                         maxWidth: "100%"

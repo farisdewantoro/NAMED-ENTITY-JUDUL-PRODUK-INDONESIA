@@ -14,11 +14,11 @@ const initialState = {
     list_article:[],
     summary:{
         "TYPE": {
-            description: "Ketik atribut. Ini menentukan fungsi produk, mis. televisi, pisau dapur, dan pemutih lotion. Atribut tipe produk mungkin dikaitkan dengan klasifikasi berbutir halus dari kategori produk dalam e- shop tertentu.",
+            description: "Ini menentukan fungsi produk, misalnya : televisi, laptop, komputer dan baju. ",
             values: []
         },
         "BRAND": {
-            description: "Atribut merek. Merek adalah merek dagang atau nama khusus yang mengidentifikasi produk.Merek membuat produk dibedakan dari kekacauan produk di pasar.Ini bisa menjadi merek perusahaan, merek yang didukung, atau merek produk individual.",
+            description: "Brand adalah merek dagang atau nama khusus yang mengidentifikasi   produk. Merek membuat produk dapat dibedakan dari kekacauan produk di pasar. Ini dapat berupa merek perusahaan, merek endorsed, atau merek produk individu.",
             values: []
         },
         "NAME": {
@@ -26,81 +26,81 @@ const initialState = {
             values: []
         },
         "COLOR": {
-            description: "",
+            description: "Atribut yang menjelaskan tentang warna produk. Warna tidak hanya basic colors (merah,kuning,hijau) tetapi bisa berupa exhaustive color (navy, copper gold).",
             values: []
         },
         "MATERIAL": {
-            description: "",
+            description: "Atribut yang menjelaskan bahan atau bahan utama dari produk itu dibuat.",
             values: []
         },
         "THEME": {
-            description: "",
+            description: "Atribut yang menggambarkan grafik yang dicetak pada produk. Biasanya terdiri dari serangkaian teks, bentuk, dan warna. Ini bisa berupa logo, lukisan, foto, atau judul entitas populer (seperti film, tokoh masyarakat, tim olahraga). Misalnya, botol termos hello kitty.",
             values: []
         },
         "DIMENSION": {
-            description: "",
+            description: "Dapat berupa panjang lebar atau volumen dari produk",
             values: []
         },
         "GENDER": {
-            description: "",
+            description: "Atribut untuk menargetkan suatu produk berdasarkan jenis kelamin. Pada judul produk terkadang terdapat informasi jenis kelamin seperti : Polo shirt pria warna hitam.",
             values: []
         },
         "SIZE": {
-            description: "",
+            description: "Atribut yang menjelasakan tentang standar ukuran dari suatu produk. Dapat berupa numeric atau nominal data (small,medium,large).",
             values: []
         },
         "MASS": {
-            description: "",
+            description: "Ini adalah satuan berat dari suatu produk atau berat dari produk.",
             values: []
         },
         "AGE": {
-            description: "",
+            description: "Beberapa produk di desain spesifik untuk beberapa golongan usia. Pada judul informasi tentang ini dapat berupa numeric, interval atau nominal (dewasa, balita, remaja).",
             values: []
         },
         "SHAPE": {
-            description: "",
+            description: "Atribut ini menggambarkan bentuk fisik suatu produk. Misalnya, cetakan kue ikan koi.",
             values: []
         },
         "CAPACITY": {
-            description: "",
+            description: "Atribut yang menjelaskan tentang kapasistas pada elektronik seperti laptop dan komputer. Misalnya Lenovo Ideapad 500GB.",
             values: []
         },
         "RAM": {
-            description: "",
+            description: "Berupa atribut yang menjelaskan besarnya RAM atau tipe dari RAM.",
             values: []
         },
         "OS": {
-            description: "",
+            description: "Atribut yang menjelaskan sistem operasi dari suatu produk. ",
             values: []
         },
         "PROCESSOR": {
-            description: "",
+            description: "Berupa informasi mengenai processor yang digunakan disuatu produk elektronik. ",
             values: []
         },
-        "GRAPHIC": {
-            description: "",
-            values: []
-        },
-        "STORAGE": {
-            description: "",
-            values: []
-        },
-        "DISPLAY": {
-            description: "",
-            values: []
-        },
-        "MEMORY": {
-            description: "",
-            values: []
-        },
-        "CPU": {
-            description: "",
-            values: []
-        },
-        "CAMERA": {
-            description: "",
-            values: []
-        },
+        // "GRAPHIC": {
+        //     description: "",
+        //     values: []
+        // },
+        // "STORAGE": {
+        //     description: "",
+        //     values: []
+        // },
+        // "DISPLAY": {
+        //     description: "",
+        //     values: []
+        // },
+        // "MEMORY": {
+        //     description: "",
+        //     values: []
+        // },
+        // "CPU": {
+        //     description: "",
+        //     values: []
+        // },
+        // "CAMERA": {
+        //     description: "",
+        //     values: []
+        // },
     }
 };
 
@@ -108,7 +108,7 @@ const initialState = {
 function findElement(element,index,data){
     // element adalah loop iterasi dari array
     //data adalah argument --> aksesnya pakai -->  this
-    return element.bio === this[0] && element.name === this[1].toUpperCase();
+    return element.bio === this[0] && element.name.toUpperCase() === this[1].toUpperCase();
 }
 
 export default function (state = initialState, action) {
