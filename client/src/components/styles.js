@@ -65,6 +65,12 @@ export default theme => ({
         color:'#f57224',
         fontSize:18
     },
+    titleNormal:{
+        color:"#49494a",
+        fontSize:"18px",
+        lineHeight:"1.33",
+        textDecoration:"underline"
+    },
     sectionProductTitle:{
         lineHeight:2,
         fontWeight:"bold"

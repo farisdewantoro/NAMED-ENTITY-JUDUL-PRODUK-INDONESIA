@@ -40,7 +40,6 @@ class LazadaBot():
         self.isRunning = False
         self.NER = NER()
         self.NER.train()
-        self.NER.predict_single('laptop asus warna hitam murah di bandung ram 8gb')
         self.key_tagged =None
     def start_bot(self,keyword):
         self.isRunning = True
@@ -63,53 +62,92 @@ class LazadaBot():
         return self.NER.state_features_to_csv()
     def create_csv_attribute(self):
         return self.NER.attributes_to_csv(self.NER.crf)
-    async def get_product_detail(self,list_url,bot):
-        try:
-            ner = self.NER  
-            for url in list_url:
-                try:
-                    if not self.isRunning:
-                        break
-                    bot.get(url)
-                    # ROOT IMAGE
-                    img = WebDriverWait(bot, 15).until(
-                        EC.presence_of_element_located(
-                            (By.CSS_SELECTOR, ".gallery-preview-panel__content img"))
-                    )
-                    title = bot.find_element_by_css_selector(
-                        ".pdp-mod-product-badge-title").text
-                
-                    price = bot.find_element_by_css_selector(
-                        ".pdp-product-price span").text
-                    location = bot.find_element_by_class_name("location__address").text
-                    img_link = img.get_attribute("src")
-                    if not img_link:
-                        img_link = False
-                    # final
-                    named_tag = ner.predict_single(title)
+    def create_transition_features_csv(self):
+        return self.NER.transition_features_to_csv()
 
-                    data = {
-                        "title": title,
-                        "link": url,
-                        "location": location,
-                        "price": price,
-                        "img_link": img_link,
-                        "named_tag": named_tag
-                    }
-                    emit('response_search_lazada', json.dumps(data))
-                    time.sleep(7)
-                except Exception as ex:
-                    print('disini bro ',ex)
-                    pass
-              
-                
-                
+    async def get_product_detail(self, url, bot):
+        try:
+            ner = self.NER 
+            bot.get(url)
+             # ROOT IMAGE
+            root_container = WebDriverWait(bot, 20).until(
+                EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, "#container"))
+                )
+
+            img = WebDriverWait(root_container, 20).until(
+                EC.presence_of_element_located(
+                    (By.CSS_SELECTOR, ".gallery-preview-panel__content img"))
+                )
+
+            title = bot.find_element_by_css_selector(
+                ".pdp-mod-product-badge-title").text
+
+            price = bot.find_element_by_css_selector(
+                    ".pdp-product-price span").text
+            location = bot.find_element_by_class_name(
+                "location__address").text
+            img_link = img.get_attribute("src")
+            if not img_link:
+                img_link = False
+                # final
+            named_tag,text_extraction = ner.predict_single(title)
            
-            
-           
-            return 'mantap'
+            data = {
+                "title": title,
+                "link": url,
+                "location": location,
+                "price": price,
+                "img_link": img_link,
+                "named_tag": named_tag,
+                "text_extraction": text_extraction
+            }
+            emit('response_search_lazada', json.dumps(data))
+            # for url in list_url:
+            #     time.sleep(7)
+            #     try:
+            #         if not self.isRunning:
+            #             break
+            #         bot.get(url)
+            #         # ROOT IMAGE
+            #         root_container = WebDriverWait(bot, 20).until(
+            #             EC.presence_of_element_located(
+            #                 (By.CSS_SELECTOR, "#container"))
+            #         )
+               
+            #         img = WebDriverWait(root_container, 20).until(
+            #             EC.presence_of_element_located(
+            #                 (By.CSS_SELECTOR, ".gallery-preview-panel__content img"))
+            #         )
+
+            #         title = bot.find_element_by_css_selector(
+            #             ".pdp-mod-product-badge-title").text
+                
+            #         price = bot.find_element_by_css_selector(
+            #             ".pdp-product-price span").text
+            #         location = bot.find_element_by_class_name("location__address").text
+            #         img_link = img.get_attribute("src")
+            #         if not img_link:
+            #             img_link = False
+            #         # final
+            #         named_tag = ner.predict_single(title)
+            #         print(named_tag)
+            #         data = {
+            #             "title": title,
+            #             "link": url,
+            #             "location": location,
+            #             "price": price,
+            #             "img_link": img_link,
+            #             "named_tag": named_tag
+            #         }
+            #         emit('response_search_lazada', json.dumps(data))
+             
+            #     except Exception as ex:
+            #         print('disini bro ',ex)
+            #         pass
+            # return 'mantap'
         except Exception as ex:
-            print(ex)
+            print('ERROR',ex)
             return None
     def get_list_url(self,bot):
         try:
@@ -117,7 +155,7 @@ class LazadaBot():
             list_url = [url.get_attribute("href") for url in root]
             return list_url
         except Exception as ex:
-            print(ex)
+            print('ERROR DARI URL',ex)
             return None
 
     async def crawling(self, bot, pagination):
@@ -135,7 +173,11 @@ class LazadaBot():
             if not keep_run:
                 break
             list_url = self.get_list_url(bot)
-            await self.get_product_detail(list_url, bot)
+            for url in list_url:
+                if not self.isRunning:
+                    break
+                await self.get_product_detail(url, bot)
+           
             print('index == ',i)
              
            

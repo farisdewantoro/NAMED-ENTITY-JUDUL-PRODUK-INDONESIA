@@ -171,7 +171,8 @@ class App extends Component {
                         <Summary classes={classes} data={searchs} />
                       </Fragment>  
                 ) }
-          
+        
+              
               
                
             </div>

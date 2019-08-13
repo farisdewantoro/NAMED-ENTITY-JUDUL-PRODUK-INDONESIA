@@ -21,3 +21,7 @@ def create_csv_attribute():
 def create_state_features_csv():
     bot.create_state_features_csv()
     return 'GENERATE CSV STATE FEATURES SUCCESS'
+@api.route('/csv/transition_features', methods=['GET'])
+def create_transition_features_csv():
+    bot.create_transition_features_csv()
+    return 'GENERATE CSV TRANSITION FEATURES SUCCESS'
