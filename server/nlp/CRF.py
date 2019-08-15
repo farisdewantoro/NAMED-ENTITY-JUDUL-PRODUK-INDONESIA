@@ -50,7 +50,6 @@ def word2features(sent, i):
         'word.istitle()': word.istitle(),
         'word.isdigit()': word.isdigit(),
         'hasNumber': hasNumbers(word),
-
         'word[-3:]': word[-3:],
         # 'word[-2:]': word[-2:],
         'word[:3]': word[:3],
@@ -73,13 +72,11 @@ def word2features(sent, i):
             '-1:hasNumber': hasNumbers(word1),
             '-1:stopword': True if word1 in stopwords else False,
             '-1:postag': postag1,
-
             # '-1:word[-3:]': word1[-3:],
             # '-1:word[-2:]': word1[-2:],
             # '-1:word[:3]': word1[:3],
             # '-1:word[:2]': word1[:2],
             # '-1:postag[:2]': postag1[:2],
-            
         })
     else:
         features['BOS'] = True #kalimat diposisi awal
@@ -291,6 +288,7 @@ def WorParser(data):
     temporary_tokens = []
     for token in data.strip().split(' '):
         token = token.strip()
+      
         m = re.match(r'^((?!\d).)$', token)
         
         if not token or m:
@@ -342,7 +340,7 @@ def WorParser(data):
             cur_type = 'I-'+cur_type
         temporary_tokens.append((token, cur_type))
         # out.write(token + '\t' + cur_type + '\n')
- 
+  
     result = []
     if(temporary_tokens):
        
@@ -412,19 +410,47 @@ class NER:
             calibration_rate=0.1,
             calibration_eta=0.01
         )
+
+    def conffusion_matrix_to_csv(self, y_true, y_pred, new_classes):
+        hasil  = multilabel_confusion_matrix(
+            y_true, y_pred, labels=new_classes
+        )
+        np.set_printoptions(threshold=sys.maxsize)
+        tn = hasil[:, 0, 0]
+        tp = hasil[:, 1, 1]
+        fn = hasil[:, 1, 0]
+        fp = hasil[:, 0, 1]
+        precision = tp / (fp+tp)
+        recall = tp / (tp + fn)
+        f1 = (2*recall*precision) / ((recall) + (precision))
+        tabel_conffusion = pd.DataFrame(
+            {"Label": new_classes, 
+            "GT": tp+tn+fp+fn, 
+            "TP": tp, 
+            "TN": tn, 
+            "FP": fp, 
+            "FN": fn, 
+            "Precision": np.round(precision,decimals=3),
+            "Recall": np.round(recall,decimals=3),
+            "F1-Score":np.round(f1,decimals=3)
+            })
+        tabel_conffusion.to_csv(os.path.abspath(
+            'server/nlp/data/data_conffusion_matrix1.csv'))
+        print(tabel_conffusion)
+        return 'ok'
     def one_hot_encoding(self,features):
         encoding = ItemSequence(features[0])
         self.encoding = encoding.items()
         return self.encoding
     def state_features_to_csv(self):
         data_frame = eli5.format_as_dataframes(
-            eli5.explain_weights_sklearn_crfsuite(self.crf, top=10))
+            eli5.explain_weights_sklearn_crfsuite(self.crf, top=2**10000))
         data_frame['targets'].to_csv(os.path.abspath(
             'server/nlp/data/data_state_features.csv'))
         return 'ok'
     def transition_features_to_csv(self):
         data_frame = eli5.format_as_dataframes(
-            eli5.explain_weights_sklearn_crfsuite(self.crf,top=2))
+            eli5.explain_weights_sklearn_crfsuite(self.crf))
         data_frame['transition_features'].to_csv(os.path.abspath(
             'server/nlp/data/data_transition_features.csv'))
         return 'ok'
@@ -537,7 +563,7 @@ class NER:
   
     def train(self):
         model = os.path.abspath(
-            'server/nlp/data/model.joblib')
+            '1server/nlp/data/model.joblib')
     
         if os.path.exists(model):
             model = load(model)
@@ -545,6 +571,11 @@ class NER:
             pred=self.predict_single(
                 'Acer Aspire 3 A315-41-R97J - AMD Ryzen R5 2500U - RAM 8GB - 1TB - Radeon RX Vega 8 - 15.6" - Windows 10 - Obsidian Black - Laptop Murah (Gratis Tas) - Bergaransi')
             # print(pred)
+            h = WorParser(
+                '<ENAMEX TYPE="NAME">iPhone 7</ENAMEX> <ENAMEX TYPE="RAM">3GB</ENAMEX> <ENAMEX TYPE="OS">iOS 10​</ENAMEX> <ENAMEX TYPE="COLOR">Gold</ENAMEX>')
+            tt = sent2features(h)
+         
+            
             return model
         else:
             print('CREATE MODEL')
@@ -605,21 +636,14 @@ class NER:
             # self.print_transitions(Counter(crf.transition_features_).most_common()[-20:])
 
 
-            # y_true = flatten(y_test)
-            # y_pred = flatten(y_pred)
+            y_true = flatten(y_test)
+            y_pred = flatten(y_pred)
+            self.conffusion_matrix_to_csv(y_true, y_pred, new_classes)
             # re_format_labels = self.re_format_class(new_classes)
             # re_format_iob_y_true = self.re_format(y_true)
             # re_format_iob_y_pred = self.re_format(y_pred)
             
-            # hasil  = multilabel_confusion_matrix(
-            #     y_true, y_pred, labels=new_classes
-            # )
-            # np.set_printoptions(threshold=sys.maxsize)
-            # tn = hasil[:, 0, 0]
-            # tp = hasil[:, 1, 1]
-            # fn = hasil[:, 1, 0]
-            # fp = hasil[:, 0, 1]
-            # print(hasil[:,])
+          
             # pprint(tp / (tp + fp))
             # pprint(tp / (tp + fn))
             
