@@ -30,6 +30,7 @@ import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from collections import Counter
 import pandas as pd
+
 GLOBAL_INDEX = 0
 stemmer = StemmerFactory().create_stemmer()
 factory = StopWordRemoverFactory()
@@ -407,8 +408,8 @@ class NER:
             max_iterations=1000,
             all_possible_transitions=True,
             verbose=True,
-            calibration_rate=0.1,
-            calibration_eta=0.01
+            calibration_eta=0.01,
+            c2=1
         )
 
     def conffusion_matrix_to_csv(self, y_true, y_pred, new_classes):
@@ -563,7 +564,7 @@ class NER:
   
     def train(self):
         model = os.path.abspath(
-            '1server/nlp/data/model.joblib')
+            'server/nlp/data/model.joblib')
     
         if os.path.exists(model):
             model = load(model)
@@ -574,7 +575,7 @@ class NER:
             h = WorParser(
                 '<ENAMEX TYPE="NAME">iPhone 7</ENAMEX> <ENAMEX TYPE="RAM">3GB</ENAMEX> <ENAMEX TYPE="OS">iOS 10​</ENAMEX> <ENAMEX TYPE="COLOR">Gold</ENAMEX>')
             tt = sent2features(h)
-         
+            print(tt)
             
             return model
         else:
