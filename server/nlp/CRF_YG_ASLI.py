@@ -73,7 +73,6 @@ def word2features(sent, i):
             '-1:hasNumber': hasNumbers(word1),
             '-1:stopword': True if word1 in stopwords else False,
             '-1:postag': postag1,
-            'BOS':False
             # '-1:word[-3:]': word1[-3:],
             # '-1:word[-2:]': word1[-2:],
             # '-1:word[:3]': word1[:3],
@@ -82,15 +81,6 @@ def word2features(sent, i):
         })
     else:
         features['BOS'] = True #kalimat diposisi awal
-        features.update({
-            '-1:word.lower()': "None",
-            '-1:word.istitle()': "None",
-            '-1:word.isupper()': "None",
-            '-1:word.isdigit()': "None",
-            '-1:hasNumber': "None",
-            '-1:stopword': "None",
-            '-1:postag': "None"
-        })
 
     if i < len(sent)-1:
         word1 = sent[i+1][0]
@@ -103,7 +93,6 @@ def word2features(sent, i):
             '+1:hasNumber': hasNumbers(word1),
             '+1:stopword': True if word1 in stopwords else False,
             '+1:postag': postag1,
-            'EOS':False
             # '+1:postag[:2]': postag1[:2],
             # '-1:word[-3:]': word1[-3:],
             # '-1:word[-2:]': word1[-2:],
@@ -112,15 +101,7 @@ def word2features(sent, i):
         })
     else:
         features['EOS'] = True #kalimat diposisi akhir
-        features.update({
-            '+1:word.lower()': "None",
-            '+1:word.istitle()': "None",
-            '+1:word.isupper()': "None",
-            '+1:word.isdigit()': "None",
-            '+1:hasNumber': "None",
-            '+1:stopword': "None",
-            '+1:postag': "None"
-        })
+  
     
     return features
 
@@ -426,7 +407,7 @@ class NER:
             algorithm='l2sgd',
             max_iterations=1000,
             all_possible_transitions=True,
-            verbose=False,
+            verbose=True,
             calibration_eta=0.01,
             c2=1
         )
@@ -532,21 +513,6 @@ class NER:
     def re_format_class(self,data):
         labels = set(map(lambda x: re.sub(r'^(B-|I-)', '', x), data))
         return list(labels)
-    def revisian_feature(self,X,Y):
-        keys_feature = [i for i in X[0][0].keys()]
-        print(keys_feature)
-        with open(os.path.abspath(
-                'server/nlp/data/data_feature_revisian.csv'), 'w', encoding="utf8",newline="") as csv_feature_revisian:
-            writer = csv.writer(csv_feature_revisian)
-            writer.writerow(keys_feature)
-            for i,l in zip(X,Y):
-                for val,label in zip(i,l):
-                    data_t = val
-                    data_t['label'] = label
-                    value_data = [v for k,v in data_t.items()]
-                    writer.writerow(value_data)
-                    print(data_t,value_data)
-        csv_feature_revisian.close()
     def data_train_to_csv(self,data):
         data_r = re_format_for_csv(data)
         data_h = []
@@ -598,7 +564,7 @@ class NER:
   
     def train(self):
         model = os.path.abspath(
-            '1server/nlp/data/model.joblib')
+            'server/nlp/data/model.joblib')
     
         if os.path.exists(model):
             model = load(model)
@@ -643,12 +609,11 @@ class NER:
                
 
   
-            X = [sent2features(s) for s in train_data[:5]]
-            Y = [sent2labels(s) for s in train_data[:5]]
-            self.revisian_feature(X,Y)
-            
+            X = [sent2features(s) for s in train_data]
+            Y = [sent2labels(s) for s in train_data]
+            self.one_hot_encoding(X)
             X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=10)
-            
+            print(len(X_train),len(X_test))
             # X_test = [sent2features(s) for s in train_test]
             # y_test = [sent2labels(s) for s in train_test]
             # X_train = X
