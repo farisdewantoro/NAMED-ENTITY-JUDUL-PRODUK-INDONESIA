@@ -536,7 +536,7 @@ class NER:
         keys_feature = [i for i in X[0][0].keys()]
         keys_feature.append('label')
         with open(os.path.abspath(
-                'server/nlp/data/data_feature_train_revisian.csv'), 'w', encoding="utf8",newline="") as csv_feature_revisian:
+                'server/nlp/data/data_feature_revisian.csv'), 'w', encoding="utf8",newline="") as csv_feature_revisian:
             writer = csv.writer(csv_feature_revisian)
             writer.writerow(keys_feature)
             for i,l in zip(X,Y):
@@ -643,10 +643,16 @@ class NER:
                
 
   
-            X = [sent2features(s) for s in train_data]
-            Y = [sent2labels(s) for s in train_data]
-            # self.revisian_feature(X,Y)
-          
+            X = [sent2features(s) for s in train_data[:1]]
+            Y = [sent2labels(s) for s in train_data[:1]]
+            self.revisian_feature(X,Y)
+             for i,l in zip(X,Y):
+                for val,label in zip(i,l):
+                    data_t = val
+                    data_t['label'] = label
+                    value_data = [v for k,v in data_t.items()]
+                    writer.writerow(value_data)
+                    print(data_t,value_data)
             X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=10)
             
             # X_test = [sent2features(s) for s in train_test]
