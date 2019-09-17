@@ -1,9 +1,8 @@
-from pycrfsuite import ItemSequence
 from sklearn_crfsuite import metrics
 from sklearn_crfsuite import scorers
 import sklearn_crfsuite
 from sklearn_crfsuite.utils import flatten
-from sklearn.metrics import make_scorer, classification_report, confusion_matrix, multilabel_confusion_matrix
+from sklearn.metrics import make_scorer, classification_report, confusion_matrix,multilabel_confusion_matrix
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 import sys
@@ -22,7 +21,7 @@ from collections.abc import Iterable
 from nltk.tag import ClassifierBasedTagger
 from nltk.chunk import ChunkParserI
 from nltk.chunk import conlltags2tree, tree2conlltags
-from nltk.tokenize import RegexpTokenizer, word_tokenize
+from nltk.tokenize import RegexpTokenizer,word_tokenize
 import csv
 from pprint import pprint
 from joblib import dump, load
@@ -31,79 +30,98 @@ import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from collections import Counter
 import pandas as pd
+
 GLOBAL_INDEX = 0
 stemmer = StemmerFactory().create_stemmer()
 factory = StopWordRemoverFactory()
 stopwords = factory.get_stop_words()
-
-
+from pycrfsuite import ItemSequence
 def hasNumbers(inputString):
     return bool(re.search(r'\d', inputString))
-
-
 def word2features(sent, i):
-
+    
     word = sent[i][0]
-
+    
     postag = sent[i][1]
-    # print('nilai i',i)
-    # print('word = ',word)
-    # print('pos = ',postag)
-    # print('sent = ',sent)
-    # print('sent-length = ',len(sent))
-    # print(50*"=")
+ 
     features = {
         'bias': 1.0,
         'word.lower()': word.lower(),
-        # 'word.isupper()': word.isupper(),
-        # 'word.istitle()': word.istitle(),
+        'word.isupper()': word.isupper(),
+        'word.istitle()': word.istitle(),
         'word.isdigit()': word.isdigit(),
         'hasNumber': hasNumbers(word),
-
         'word[-3:]': word[-3:],
-        'word[-2:]': word[-2:],
+        # 'word[-2:]': word[-2:],
         'word[:3]': word[:3],
-        'word[:2]': word[:2],
-        'stopword': True if word in stopwords else False,
-
+        # 'word[:2]': word[:2],
+        'stopword':True if word in stopwords else False,
+     
         'postag': postag,
         # 'postag[:2]': postag[:2],
-
-
+  
+        
     }
     if i > 0:
         word1 = sent[i-1][0]
         postag1 = sent[i-1][1]
         features.update({
             '-1:word.lower()': word1.lower(),
-            # '-1:word.istitle()': word1.istitle(),
-            # '-1:word.isupper()': word1.isupper(),
-            '-1:word.isdigit()': word.isdigit(),
+            '-1:word.istitle()': word1.istitle(),
+            '-1:word.isupper()': word1.isupper(),
+            '-1:word.isdigit()': word1.isdigit(),
             '-1:hasNumber': hasNumbers(word1),
             '-1:stopword': True if word1 in stopwords else False,
-            # '-1:postag': postag1,
+            '-1:postag': postag1,
+            'BOS':False
+            # '-1:word[-3:]': word1[-3:],
+            # '-1:word[-2:]': word1[-2:],
+            # '-1:word[:3]': word1[:3],
+            # '-1:word[:2]': word1[:2],
             # '-1:postag[:2]': postag1[:2],
-
         })
     else:
-        features['BOS'] = True  # kalimat diposisi awal
+        features['BOS'] = True #kalimat diposisi awal
+        features.update({
+            '-1:word.lower()': "None",
+            '-1:word.istitle()': "None",
+            '-1:word.isupper()': "None",
+            '-1:word.isdigit()': "None",
+            '-1:hasNumber': "None",
+            '-1:stopword': "None",
+            '-1:postag': "None"
+        })
 
     if i < len(sent)-1:
         word1 = sent[i+1][0]
         postag1 = sent[i+1][1]
         features.update({
             '+1:word.lower()': word1.lower(),
-            # '+1:word.istitle()': word1.istitle(),
-            # '+1:word.isupper()': word1.isupper(),
-            '+1:word.isdigit()': word.isdigit(),
+            '+1:word.istitle()': word1.istitle(),
+            '+1:word.isupper()': word1.isupper(),
+            '+1:word.isdigit()': word1.isdigit(),
             '+1:hasNumber': hasNumbers(word1),
             '+1:stopword': True if word1 in stopwords else False,
-            # '+1:postag': postag1,
+            '+1:postag': postag1,
+            'EOS':False
             # '+1:postag[:2]': postag1[:2],
+            # '-1:word[-3:]': word1[-3:],
+            # '-1:word[-2:]': word1[-2:],
+            # '-1:word[:3]': word1[:3],
+            # '-1:word[:2]': word1[:2],
         })
     else:
-        features['EOS'] = True  # kalimat diposisi akhir
-
+        features['EOS'] = True #kalimat diposisi akhir
+        features.update({
+            '+1:word.lower()': "None",
+            '+1:word.istitle()': "None",
+            '+1:word.isupper()': "None",
+            '+1:word.isdigit()': "None",
+            '+1:hasNumber': "None",
+            '+1:stopword': "None",
+            '+1:postag': "None"
+        })
+    
     return features
 
 
@@ -136,16 +154,16 @@ MAP_ENTITY_TAG = {
     "RAM": "RAM",  # 24
     "OS": "OS",  # 15
     "PROCESSOR": "PROCESSOR",  # 14
-    "O": "O",
+    "O":"O",
     # "GRAPHIC": "GRAPHIC",  # 7
     # "STORAGE": "STORAGE",  # 7
     # "DISPLAY": "DISPLAY",  # 5
     # "MEMORY": "MEMORY",  # 5
     # "CPU": "CPU",  # 4
     # "CAMERA": "CAMERA",  # 4,
-   	# "ORGANIZATION": "ORG",
-   	# "LOCATION": "LOC",
-   	# "PERSON": "PER",
+	# "ORGANIZATION": "ORG",
+	# "LOCATION": "LOC",
+	# "PERSON": "PER",
 
     # "BATTERY": "BATTERY",
     # "YEAR": "YEAR",
@@ -195,7 +213,7 @@ TAGGER3.set_model_file(os.path.abspath(
 
 def getPOSTag(_temporary_tokens):
     strin = []
-
+   
     for token_tag in _temporary_tokens:
         if token_tag[0].encode('ascii', 'ignore').decode('utf8'):
             strin.append(token_tag[0].encode('ascii', 'ignore').decode('utf8'))
@@ -228,11 +246,10 @@ def getTypeData(_ne):
     """
     Hapus karakter bukan alfabet dari jenis Name Entity
     """
-
+    
     entity = re.sub(r'[^\w]', '', a), b
 
     return entity
-
 
 def filterEntities(data):
     not_ne_list = []
@@ -244,17 +261,17 @@ def filterEntities(data):
         return False
     else:
         return True
-
-
+    
+                
 def checkEntities(data):
-
+    
     l_regex = re.compile(r"\<ENAMEX\s+TYPE\=\"")
     r_regex = re.compile(r"\"\>[^<]+\<\/ENAMEX\>")
     a = r_regex.sub(r'\0', l_regex.sub(r'\0', data))
     if a.strip() in list(MAP_ENTITY_TAG.keys()):
         print(a)
     else:
-        print('ga', a)
+        print('ga',a)
     return a
 
 
@@ -269,10 +286,10 @@ NON_ENTITY_TYPE = 'O'
 
 def check_and_process_eos(token):
     match = re.match(EOS_PATTERN, token)
-
+  
     if match:
-        print('ada nih', match)
-        result.append((match.group(1), cur_type))
+        print('ada nih',match)
+        result.append((match.group(1),cur_type))
         # out.write(match.group(1) + '\t' + cur_type + '\n')
         # out.write('.' + '\t' + 'I-'+cur_type + '\n')
         # out.write('\n')
@@ -291,11 +308,12 @@ def WorParser(data):
     temporary_tokens = []
     for token in data.strip().split(' '):
         token = token.strip()
+      
         m = re.match(r'^((?!\d).)$', token)
-
+        
         if not token or m:
             continue
-
+    
         match = re.match(START_PATTERN, token)
         if match:
             if match.group(1):
@@ -308,9 +326,9 @@ def WorParser(data):
             # print(match.group(1), match.group(2))
             temporary_tokens.append((match.group(2), 'B-' + match.group(1)))
             cur_type = NON_ENTITY_TYPE
-
+            
             if not check_and_process_eos(match.group(3)) and match.group(3):
-
+         
                 # print(match.group())
                 temporary_tokens.append((match.group(3), cur_type))
                 # out.write(match.group(3) + '\t' + cur_type + '\n')
@@ -338,122 +356,36 @@ def WorParser(data):
 
         if check_and_process_eos(token):
             continue
-        if cur_type != 'O' and not re.match(r'^(I-|B-)', cur_type):
+        if cur_type != 'O' and not re.match(r'^(I-|B-)',cur_type):
             cur_type = 'I-'+cur_type
         temporary_tokens.append((token, cur_type))
         # out.write(token + '\t' + cur_type + '\n')
-
+  
     result = []
     if(temporary_tokens):
-
+       
         postageed = getPOSTag(temporary_tokens)
-
+     
         # result.append(postageed)
         for i in range(len(temporary_tokens)):
             str_postagged = None
             ne_ = temporary_tokens[i][1]
-            ne_temporary = re.sub(r'^(B-|I-)', '', ne_)
+            ne_temporary = re.sub(r'^(B-|I-)','',ne_)
             if ne_temporary not in list(MAP_ENTITY_TAG.keys()):
-
+                
                 ne_ = 'O'
             # print(postageed,temporary_tokens[i][1])
             str_append = (postageed[i][0], postageed[i][1], ne_)
-
+            
             result.append(str_append)
     # print(result)
     return result
 
 
-def parseEntity(data):
-    temporary_tokens = []
-    entities_name = re.findall(
-        r"\<ENAMEX\s+TYPE\=\"\w+\"\>[^<]+\<\/ENAMEX\>", data)
-
-    temp = []
-    # check_ne =  filterEntities(entities_name)
-    # print(check_ne)
-    list_entity = []
-    for entity_name in entities_name:
-
-        ne_type, ne_data = getTypeData(entity_name)
-
-        check_if_exist = list(
-            filter(lambda x: x == ne_type.strip(), list(MAP_ENTITY_TAG.keys())))
-
-        if check_if_exist:
-
-            temp = data.strip().split(entity_name, 1)
-            cek_failed_entity = re.compile("<ENAMEX")
-
-            if temp[0] and (cek_failed_entity.search(temp[0]) == None):
-
-                for token in temp[0].strip().split(' '):
-                    word = token.replace('\x00', '')
-                    # hilangkan semua karakter kecuali number dan huruf apabila panjannya hanya 1
-                    filter_character = re.search('^[^a-zA-Z\d\s:]$', word)
-                    if word and not filter_character:
-                        temporary_tokens.append((word, 'O'))
-
-            ne_data_split = ne_data.strip().split(' ')
-            wordx = ne_data_split[0].replace('\x00', '')
-
-            if wordx:
-
-                temporary_tokens.append(
-                    (wordx, "B-" + MAP_ENTITY_TAG[ne_type.replace('\x00', '')]))
-
-            if len(ne_data_split) > 1:
-                for i in range(len(ne_data_split) - 1):
-                    word = ne_data_split[i + 1].replace('\x00', '')
-                    if word:
-                        temporary_tokens.append(
-                            (word, "I-" + MAP_ENTITY_TAG[ne_type.replace('\x00', '')]))
-            data = temp[1]
-
-            if len(temp) > 1:
-
-                if temp[1] and (cek_failed_entity.search(temp[1]) == None):
-
-                    for token in temp[1].strip().split(' '):
-                        word = token.replace('\x00', '')
-                        # hilangkan semua karakter kecuali number dan huruf apabila panjannya hanya 1
-                        filter_character = re.search('^[^a-zA-Z\d\s:]$', word)
-                        if word and not filter_character:
-
-                            temporary_tokens.append((word, 'O'))
-                # if temp[1]:
-                #     none_tag = re.sub(
-                #         r"\<ENAMEX\s+TYPE\=\"\w+\"\>[^<]+\<\/ENAMEX\>", "", temp[1].strip())
-                #     for token in none_tag.strip().split(' '):
-
-                #         word = token.replace('\x00', '')
-                #         # hilangkan semua karakter kecuali number dan huruf apabila panjannya hanya 1
-                #         filter_character = re.search('^[^a-zA-Z\d\s:]$', word)
-
-                #         if word and not filter_character:
-
-                #             temporary_tokens.append((word, 'O'))
-        else:
-            pass
-
-    result = []
-    if(temporary_tokens):
-        print(temporary_tokens)
-        postageed = getPOSTag(temporary_tokens)
-
-        for i in range(len(temporary_tokens)):
-            str_postagged = None
-
-            str_append = (postageed[i][0], postageed[i][1], str(
-                temporary_tokens[i][1].encode('ascii', 'ignore'), 'utf8'))
-            result.append(str_append)
-
-    return result
 
 
 train_data = []
 train_test = []
-
 
 def re_format_for_csv(data):
     data_t = []
@@ -471,7 +403,7 @@ def re_format_for_csv(data):
         d = data_t[i][0]
         dd = data_t[i].copy()
         del dd[0]
-        check = list(filter(lambda x: x[0] == d, data_r))
+        check = list(filter(lambda x:x[0] == d,data_r))
 
         if len(check) > 0:
             for data_index in range(len(data_r)):
@@ -480,7 +412,6 @@ def re_format_for_csv(data):
         else:
             data_r.append([d, [dd]])
     return data_r
-
 
 class NER:
     def __init__(self):
@@ -495,47 +426,99 @@ class NER:
             algorithm='l2sgd',
             max_iterations=1000,
             all_possible_transitions=True,
-            verbose=False
+            verbose=False,
+            calibration_eta=0.01,
+            c2=1
         )
 
-    def one_hot_encoding(self, features):
+    def conffusion_matrix_to_csv(self, y_true, y_pred, new_classes):
+        hasil  = multilabel_confusion_matrix(
+            y_true, y_pred, labels=new_classes
+        )
+        np.set_printoptions(threshold=sys.maxsize)
+        tn = hasil[:, 0, 0]
+        tp = hasil[:, 1, 1]
+        fn = hasil[:, 1, 0]
+        fp = hasil[:, 0, 1]
+        precision = tp / (fp+tp)
+        recall = tp / (tp + fn)
+        f1 = (2*recall*precision) / ((recall) + (precision))
+        tabel_conffusion = pd.DataFrame(
+            {"Label": new_classes, 
+            "GT": tp+tn+fp+fn, 
+            "TP": tp, 
+            "TN": tn, 
+            "FP": fp, 
+            "FN": fn, 
+            "Precision": np.round(precision,decimals=3),
+            "Recall": np.round(recall,decimals=3),
+            "F1-Score":np.round(f1,decimals=3)
+            })
+        tabel_conffusion.to_csv(os.path.abspath(
+            'server/nlp/data/data_conffusion_matrix1.csv'))
+        print(tabel_conffusion)
+        return 'ok'
+    def one_hot_encoding(self,features):
         encoding = ItemSequence(features[0])
         self.encoding = encoding.items()
         return self.encoding
-
     def state_features_to_csv(self):
         data_frame = eli5.format_as_dataframes(
-            eli5.explain_weights_sklearn_crfsuite(self.crf, top=10))
+            eli5.explain_weights_sklearn_crfsuite(self.crf, top=2**10000))
         data_frame['targets'].to_csv(os.path.abspath(
             'server/nlp/data/data_state_features.csv'))
         return 'ok'
-
     def transition_features_to_csv(self):
         data_frame = eli5.format_as_dataframes(
-            eli5.explain_weights_sklearn_crfsuite(self.crf, top=2))
+            eli5.explain_weights_sklearn_crfsuite(self.crf))
         data_frame['transition_features'].to_csv(os.path.abspath(
             'server/nlp/data/data_transition_features.csv'))
         return 'ok'
-
-    def attributes_to_csv(self, model):
+    def attributes_to_csv(self,model):
         with open(os.path.abspath('server/nlp/data/data_attributes.csv'), 'w', encoding="utf8", newline="") as data_attributes:
             writer = csv.writer(data_attributes)
             writer.writerow(['No', 'Attributes'])
-
+         
             for k, i in model._info.attributes.items():
                 writer.writerow([i, k])
         data_attributes.close()
         return 'ok'
-
-    def print_transitions(self, trans_features):
+    def print_transitions(self,trans_features):
         for (label_from, label_to), weight in trans_features:
             print("%-6s -> %-7s %0.6f" % (label_from, label_to, weight))
-
-    def re_format(self, data):
+    def re_format_predict(self,data):
+        result = []
+        index = 0
+        if len(data) > 0:
+            for i in range(len(data[0])):
+                _d = 'None'
+                B = re.match(r'^(B-)', data[0][i][0])
+                I = re.match(r'^(I-)', data[0][i][0])
+                d = re.sub(r'^(B-|I-)', '', data[0][i][0])
+                if i > 0:
+                    _d = re.sub(r'^(B-|I-)', '', data[0][i-1][0])
+                word = data[0][i][1]
+                if B:
+                    index = len(result)
+                    result.append((d, [word]))
+                if I:
+                    if _d == d and word not in result[index][1]:
+                        result[index][1].append(word)
+                #     if any(key.get(B, None) == B for key in result):
+                #         result.append(d)
+        hasil_akhir = {}
+        for i in result:
+            if i[0] in hasil_akhir:
+                hasil_akhir[i[0]].append(' '.join(i[1]))
+            else:
+                hasil_akhir[i[0]] = [' '.join(i[1])]
+    
+        return hasil_akhir
+    def re_format(self,data):
         result = []
         for i in range(len(data)):
-            B = re.match(r'^(B-)', data[i])
-            I = re.match(r'^(I-)', data[i])
+            B = re.match(r'^(B-)',data[i])
+            I = re.match(r'^(I-)',data[i])
             d = re.sub(r'^(B-|I-)', '', data[i])
             _d = re.sub(r'^(B-|I-)', '', data[i-1])
             if B:
@@ -546,49 +529,63 @@ class NER:
             else:
                 result.append(d)
         return result
-
-    def re_format_class(self, data):
+    def re_format_class(self,data):
         labels = set(map(lambda x: re.sub(r'^(B-|I-)', '', x), data))
         return list(labels)
-
-    def data_train_to_csv(self, data):
-
+    def revisian_feature(self,X,Y):
+        keys_feature = [i for i in X[0][0].keys()]
+        keys_feature.append('label')
+        with open(os.path.abspath(
+                'server/nlp/data/data_feature_train_revisian.csv'), 'w', encoding="utf8",newline="") as csv_feature_revisian:
+            writer = csv.writer(csv_feature_revisian)
+            writer.writerow(keys_feature)
+            for i,l in zip(X,Y):
+                for val,label in zip(i,l):
+                    data_t = val
+                    data_t['label'] = label
+                    value_data = [v for k,v in data_t.items()]
+                    writer.writerow(value_data)
+                  
+        csv_feature_revisian.close()
+    def data_train_to_csv(self,data):
         data_r = re_format_for_csv(data)
         data_h = []
         for i in data_r:
             index = i[0]
             for val in i[1]:
-                val.insert(0, index)
+                val.insert(0,index)
                 data_h.append(val)
 
+
         with open(os.path.abspath(
-                'server/nlp/data/data_train_transform.csv'), 'w', encoding="utf8", newline="") as data_train:
+            'server/nlp/data/data_train_transform.csv'), 'w', encoding="utf8",newline="") as data_train:
             writer = csv.writer(data_train)
-            writer.writerow(['Word_row', 'Word', 'POS', 'Label'])
+            writer.writerow(['Word_row','Word','POS','Label'])
             for i in data_h:
                 writer.writerow(i)
         data_train.close()
-        # if :
-        #     data_r.append([d,dd])
-        # else:
-        #     data_r.append()
-        # if data_t[i][0] == i[0]:
-        #     print(data_t[i][0], i[0])
+            # if :
+            #     data_r.append([d,dd])
+            # else:
+            #     data_r.append()
+            # if data_t[i][0] == i[0]:
+            #     print(data_t[i][0], i[0])
 
         #     index = i[0]
         #     print(list(data_t[i]))
-        # check = list(filter(lambda x: x[0] == index, data_r))
+            # check = list(filter(lambda x: x[0] == index, data_r))
+            
+            # if len(check) > 0:
 
-        # if len(check) > 0:
-
-        #     print(data_r.index(check))
-        #     pass
-        # else:
-        #     dd= list(i)
-        #     del dd[0]
-
-        #     data_r.append([index,[dd]])
-
+            #     print(data_r.index(check))
+            #     pass
+            # else:
+            #     dd= list(i)
+            #     del dd[0]
+                
+            #     data_r.append([index,[dd]])
+             
+                
         # print(data_r)
         # with open(os.path.abspath(
         #         'server/nlp/data/data_train.csv'), 'w', encoding="utf8",newline="") as data_train:
@@ -597,14 +594,24 @@ class NER:
         #     for i in data:
         #         for d in i:
         #             writer.writerow(i,d)
-
+                
+  
     def train(self):
         model = os.path.abspath(
             '1server/nlp/data/model.joblib')
-
+    
         if os.path.exists(model):
             model = load(model)
             self.crf = model
+            pred=self.predict_single(
+                'Dijual Handphone Samsung Galaxy Note 7')
+            # print(pred)
+            # h = WorParser(
+            #     '<ENAMEX TYPE="TYPE">Handphone</ENAMEX> <ENAMEX TYPE="BRAND">Samsung</ENAMEX> <ENAMEX TYPE="NAME">Galaxy 7</ENAMEX> murah')
+            h = WorParser(
+                'Promo <ENAMEX TYPE="TYPE">Laptop</ENAMEX> <ENAMEX TYPE="BRAND">Asus</ENAMEX> <ENAMEX TYPE="NAME">A411UF</ENAMEX>')
+            tt = sent2features(h)
+        
             return model
         else:
             print('CREATE MODEL')
@@ -613,7 +620,7 @@ class NER:
             # lines = [line for line in f.read().split("\n")]
             # f.close()
             # train_test = []
-            # train_data = []
+            train_data = []
             # for row in lines:
             #     h = WorParser(row)
             #     # h = parseEntity(row)
@@ -622,24 +629,26 @@ class NER:
 
             dd = pd.read_csv(os.path.abspath(
                 'server/nlp/data/data_train_transform.csv'))
-
+          
             for i in range(len(dd)):
                 dd_index = i
 
-                _da = (dd['Word'][i], dd['POS'][i], dd['Label'][i])
+                _da = (dd['Word'][i],dd['POS'][i],dd['Label'][i])
                 if i > 0 and dd['Word_row'][i] == dd['Word_row'][dd_index] and len(train_data)-1 >= dd['Word_row'][i]:
                     dd_index = i-1
                     train_data[dd['Word_row'][i]].append(_da)
                 else:
                     train_data.append([_da])
+            
+               
 
+  
             X = [sent2features(s) for s in train_data]
             Y = [sent2labels(s) for s in train_data]
-            self.one_hot_encoding(X)
-
-            X_train, X_test, y_train, y_test = train_test_split(
-                X, Y, test_size=0.20, random_state=10)
-
+            # self.revisian_feature(X,Y)
+          
+            X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.20, random_state=10)
+            
             # X_test = [sent2features(s) for s in train_test]
             # y_test = [sent2labels(s) for s in train_test]
             # X_train = X
@@ -656,25 +665,25 @@ class NER:
                 y_test, y_pred, labels=new_classes, digits=3
             )
 
-            # print(score)
+            print(score)
+            # print("Top likely transitions:")
+            # self.print_transitions(Counter(crf.transition_features_).most_common(20))
 
-            # y_true = flatten(y_test)
-            # y_pred = flatten(y_pred)
+            # print("\nTop unlikely transitions:")
+            # self.print_transitions(Counter(crf.transition_features_).most_common()[-20:])
+
+
+            y_true = flatten(y_test)
+            y_pred = flatten(y_pred)
+            self.conffusion_matrix_to_csv(y_true, y_pred, new_classes)
             # re_format_labels = self.re_format_class(new_classes)
             # re_format_iob_y_true = self.re_format(y_true)
             # re_format_iob_y_pred = self.re_format(y_pred)
-
-            # hasil  = multilabel_confusion_matrix(
-            #     y_true, y_pred, labels=new_classes
-            # )
-            # np.set_printoptions(threshold=sys.maxsize)
-            # tn = hasil[:, 0, 0]
-            # tp = hasil[:, 1, 1]
-            # fn = hasil[:, 1, 0]
-            # fp = hasil[:, 0, 1]
-            # print(hasil[:,])
+            
+          
             # pprint(tp / (tp + fp))
             # pprint(tp / (tp + fn))
+            
 
             # print("Top likely transitions:")
             # self.print_transitions(Counter(crf.transition_features_).most_common(20))
@@ -688,13 +697,15 @@ class NER:
             #         writer.writerow(i)
             # csv_feature.close()
 
+            
             dump(crf, os.path.abspath(
-                'server/nlp/data/te_model.joblib'))
+                'server/nlp/data/model.joblib'))
             self.crf = crf
-
+        
+         
             # weight = eli5.show_weights(crf, top=30)
             # print(dir(eli5))
-
+          
             # for i in data_frame:
             #     print(data_frame[i])
             # pd = df.DataFrame(data_frame, index=True)
@@ -706,22 +717,20 @@ class NER:
             # pprint(dir(self.crf))
             # pprint(self.crf.state_features_)
             # pprint(self.crf.training_log_.iterations)
-
+    
+     
             return self.crf
-
     def weight_targets(self):
         data_frame = eli5.format_as_dataframes(
             eli5.explain_weights_sklearn_crfsuite(self.crf, top=2**10000))
 
         return list(zip(data_frame['targets']['target'], data_frame['targets']['feature'], data_frame['targets']['weight']))
-
     def transition_features(self):
         data_frame = eli5.format_as_dataframes(
             eli5.explain_weights_sklearn_crfsuite(self.crf))
         return list(zip(data_frame['transition_features']['from'],
                         data_frame['transition_features']['coef'], data_frame['transition_features']['to']))
-
-    def predict_single(self, input_text):
+    def predict_single(self,input_text):
         crf = self.crf
 #         labels = list(crf.classes_)
 #         # labels.remove('O')
@@ -733,12 +742,17 @@ class NER:
         # text_tokenize = word_tokenize(input_text)
         text_pos = getPOSTagTesting(text_tokenize)
         text_feature = sent2features(text_pos)
+       
         y_pred = crf.predict_single(text_feature)
 
-        # print(list(zip(y_pred,text_tokenize)))
-        result = [list(zip(y_pred, text_tokenize))]
-        return result
+        # print(self.crf._tagger.probability(y_pred))
+        # print(self.crf._tagger.marginal('I-AGE',2))
 
+        # print(list(zip(y_pred,text_tokenize)))
+        
+        result = [list(zip(y_pred,text_tokenize))]
+
+        return result, self.re_format_predict(result)
     def cfm(self):
         crf = self.crf
         f = open(self.file_path)
@@ -756,7 +770,7 @@ class NER:
         y_train = [sent2labels(s) for s in train_data]
         X_test = [sent2features(s) for s in train_test]
         y_test = [sent2labels(s) for s in train_test]
-
+ 
         crf.fit(X_train, y_train)
         labels = list(crf.classes_)
         new_classes = labels.copy()
@@ -770,6 +784,8 @@ class NER:
         print(score)
         return score
         # return make_scorer(y_pred=per.predict(X_test), y_true=y_test, labels=new_classes)
+            
+
 
 
 # print(ner.cfm())

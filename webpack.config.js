@@ -38,11 +38,12 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
-    output: {
-        path: __dirname + './client/src/dist',
-        publicPath: '/',
-        filename: 'bundle.js'
-    },
+    devtool: false,
+    // output: {
+    //     path: __dirname + './client/src/dist',
+    //     publicPath: '/',
+    //     filename: 'bundle.js'
+    // },
     devServer: {
         // Display only errors to reduce the amount of output.
         stats: "errors-only",
