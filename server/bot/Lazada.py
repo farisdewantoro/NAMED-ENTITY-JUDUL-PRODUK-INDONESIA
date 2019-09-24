@@ -183,7 +183,7 @@ class LazadaBot():
            
 
     def run_finding(self):
-        # menggunakan chrome
+        # menggunakan chrome !
         GOOGLE_CHROME_PATH = '/app/.apt/usr/bin/google_chrome'
         CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
         chrome_options = webdriver.ChromeOptions()
