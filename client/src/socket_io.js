@@ -1,6 +1,6 @@
 import socket from 'socket.io-client'
 
-const io = socket.connect('http://127.0.0.1:5000')
+const io = socket.connect('https://named-entity-produk.herokuapp.com:25155')
 
 
 export default io
